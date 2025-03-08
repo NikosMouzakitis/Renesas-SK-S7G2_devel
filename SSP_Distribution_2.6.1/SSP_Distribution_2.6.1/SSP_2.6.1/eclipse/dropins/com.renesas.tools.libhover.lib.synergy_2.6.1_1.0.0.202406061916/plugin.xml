@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="id1"
+         name="name"
+         point="org.eclipse.linuxtools.cdt.libhover.library">
+      <library
+            location="./data/com.renesas.cdt.synergy.libhover.ssp.2.6.1.libhover"
+            name="Renesas.Synergy.2.6.1.pack"
+            type="C">
+      </library>
+   </extension>
+
+</plugin>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="com.tasking.pinmapper.mapping">
+    <vendor caption="Renesas" id="renesas" />
+    <group caption="Renesas Synergy" id="renesas.synergy" />
+    <family caption="Renesas S7G2" id="renesas.s7g2" />
+    <mapping vendor="renesas" group="renesas.synergy" family="renesas.s7g2" device="renesas.s7g2_bd" package="renesas.224bga" path="platform:/base/../internal/projectgen/arm/${version}/pinmapping/PinCfgR7FS7G27xxxxxxBD.xml" />
+    <mapping vendor="renesas" group="renesas.synergy" family="renesas.s7g2" device="renesas.s7g2_bg" package="renesas.176bga" path="platform:/base/../internal/projectgen/arm/${version}/pinmapping/PinCfgR7FS7G27xxxxxxBG.xml" />
+    <mapping vendor="renesas" group="renesas.synergy" family="renesas.s7g2" device="renesas.s7g2_lk" package="renesas.145lga" path="platform:/base/../internal/projectgen/arm/${version}/pinmapping/PinCfgR7FS7G27xxxxxxLK.xml" />
+    <mapping vendor="renesas" group="renesas.synergy" family="renesas.s7g2" device="renesas.s7g2_fb" package="renesas.144lqfp" path="platform:/base/../internal/projectgen/arm/${version}/pinmapping/PinCfgR7FS7G27xxxxxxFB.xml" />
+    <mapping vendor="renesas" group="renesas.synergy" family="renesas.s7g2" device="renesas.s7g2_fc" package="renesas.176lqfp" path="platform:/base/../internal/projectgen/arm/${version}/pinmapping/PinCfgR7FS7G27xxxxxxFC.xml" />
+    <mapping vendor="renesas" group="renesas.synergy" family="renesas.s7g2" device="renesas.s7g2_fp" package="renesas.100lqfp" path="platform:/base/../internal/projectgen/arm/${version}/pinmapping/PinCfgR7FS7G27xxxxxxFP.xml" />
+  </extension>
+</plugin>

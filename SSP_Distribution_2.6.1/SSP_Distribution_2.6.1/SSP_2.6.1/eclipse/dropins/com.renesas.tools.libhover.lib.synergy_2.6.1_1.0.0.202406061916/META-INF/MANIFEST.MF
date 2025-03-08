@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Synergy_2.6.1
+Bundle-SymbolicName: com.renesas.tools.libhover.lib.synergy_2.6.1;sing
+ leton:=true
+Bundle-Version: 1.0.0.202406061916
+Bundle-Vendor: Renesas Electronics Corp.
+Automatic-Module-Name: com.renesas.tools.libhover.lib.synergy.2.5.0.dr
+ op2
+Require-Bundle: org.eclipse.linuxtools.cdt.libhover;bundle-version="1.
+ 2.0"
+

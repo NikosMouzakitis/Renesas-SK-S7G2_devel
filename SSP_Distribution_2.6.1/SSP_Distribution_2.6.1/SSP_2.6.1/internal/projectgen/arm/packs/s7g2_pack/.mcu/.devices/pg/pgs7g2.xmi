@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projgen:Container xmi:version="2.0" xmlns:projgen="http:///projgen.ecore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmi="http://www.omg.org/XMI" xsi:schemaLocation="http:///projgen.ecore ProjGen.ecore">
+  <Target shortName="SYNERGY" target="SYNERGY">
+    <CpuType shortName="S7" isUsedInPG="true">
+      <Cpu shortName="S7G2" compilerCpuType="cortex-m4">
+        <PinCountRZTC shortName="S7G2 - 224 Pin" isUsedInPG="true" PinNumber="224">
+          <Device shortName="R7FS7G27G2A01CBD" DeviceCommand="R7FS7G27G" />
+          <Device shortName="R7FS7G27H2A01CBD" DeviceCommand="R7FS7G27H" />
+        </PinCountRZTC>
+        <PinCountRZTC shortName="S7G2 - 176 Pin" isUsedInPG="true" PinNumber="176">
+          <Device shortName="R7FS7G27G2A01CBG" DeviceCommand="R7FS7G27G" />
+          <Device shortName="R7FS7G27G3A01CFC" DeviceCommand="R7FS7G27G" />
+          <Device shortName="R7FS7G27H2A01CBG" DeviceCommand="R7FS7G27H" />
+          <Device shortName="R7FS7G27H3A01CFC" DeviceCommand="R7FS7G27H" />
+        </PinCountRZTC>
+        <PinCountRZTC shortName="S7G2 - 145 Pin" isUsedInPG="true" PinNumber="145">
+          <Device shortName="R7FS7G27G2A01CLK" DeviceCommand="R7FS7G27G" />
+          <Device shortName="R7FS7G27H2A01CLK" DeviceCommand="R7FS7G27H" />
+        </PinCountRZTC>
+        <PinCountRZTC shortName="S7G2 - 144 Pin" isUsedInPG="true" PinNumber="144">
+          <Device shortName="R7FS7G27G3A01CFB" DeviceCommand="R7FS7G27G" />
+          <Device shortName="R7FS7G27H3A01CFB" DeviceCommand="R7FS7G27H" />
+        </PinCountRZTC>
+        <PinCountRZTC shortName="S7G2 - 100 Pin" isUsedInPG="true" PinNumber="100">
+          <Device shortName="R7FS7G27G3A01CFP" DeviceCommand="R7FS7G27G" />
+        </PinCountRZTC>
+      </Cpu>
+    </CpuType>
+  </Target>
+</projgen:Container>

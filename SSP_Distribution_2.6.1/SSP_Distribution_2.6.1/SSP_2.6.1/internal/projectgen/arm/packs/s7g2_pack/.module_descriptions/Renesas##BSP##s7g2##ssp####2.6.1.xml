@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<synergyModuleDescription>
+    <config id="config.bsp.s7g2.ssp" path="ssp_cfg/bsp/bsp_mcu_family_cfg.h" version="0">
+       <property default="config.bsp.s7g2.ssp.OFS0_Register.default" display="OFS0 register settings" id="config.bsp.s7g2.ssp.OFS0">
+			<option display="Select fields below" id="config.bsp.s7g2.ssp.OFS0_Register.default" value="(0)"/>
+        </property>
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_start_mode.disabled" display="     IWDT Start Mode" id="config.bsp.s7g2.ssp.OFS0.iwdt_start_mode">
+			 <option display="IWDT is Disabled" id="config.bsp.s7g2.ssp.OFS0.iwdt_start_mode.disabled" value="1 &lt;&lt; 1"/>
+			 <option display="IWDT is automatically activated after a reset (Autostart mode)" id="config.bsp.s7g2.ssp.OFS0.iwdt_start_mode.enabled" value="0 &lt;&lt; 1"/>
+		</property>
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_timeout.2048" display="     IWDT Timeout Period" id="config.bsp.s7g2.ssp.OFS0.iwdt_timeout">
+			 <option display="128 cycles" id="config.bsp.s7g2.ssp.OFS0.iwdt_timeout.128" value="0 &lt;&lt; 2"/>
+			 <option display="512 cycles" id="config.bsp.s7g2.ssp.OFS0.iwdt_timeout.512" value="1 &lt;&lt; 2"/>
+			 <option display="1024 cycles" id="config.bsp.s7g2.ssp.OFS0.iwdt_timeout.1024" value="2 &lt;&lt; 2"/>
+			 <option display="2048 cycles" id="config.bsp.s7g2.ssp.OFS0.iwdt_timeout.2048" value="3 &lt;&lt; 2"/>
+		</property>	
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.128" display="     IWDT Dedicated Clock Frequency Divisor" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor">
+			 <option display="1" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.1" value="0 &lt;&lt; 4"/>
+			 <option display="16" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.16" value="2 &lt;&lt; 4"/>
+			 <option display="32" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.32" value="3 &lt;&lt; 4"/>
+			 <option display="64" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.64" value="4 &lt;&lt; 4"/>
+			 <option display="128" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.128" value="15 &lt;&lt; 4"/>
+			 <option display="256" id="config.bsp.s7g2.ssp.OFS0.iwdt_divisor.256" value="5 &lt;&lt; 4"/>
+		</property>			
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_window_end.0" display="     IWDT Window End Position" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_end">
+			 <option display="75%" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_end.75" value="0 &lt;&lt; 8"/>
+			 <option display="50%" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_end.50" value="1 &lt;&lt; 8"/>
+			 <option display="25%" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_end.25" value="2 &lt;&lt; 8"/>
+			 <option display=" 0% (no window end position)" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_end.0" value="3 &lt;&lt; 8"/>
+		</property>			
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_window_start.100" display="     IWDT Window Start Position" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_start">
+			 <option display="25%" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_start.25" value="0 &lt;&lt; 10"/>
+			 <option display="50%" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_start.50" value="1 &lt;&lt; 10"/>
+			 <option display="75%" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_start.75" value="2 &lt;&lt; 10"/>
+			 <option display="100% (no window start position)" id="config.bsp.s7g2.ssp.OFS0.iwdt_window_start.100" value="3 &lt;&lt; 10"/>
+		</property>	
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_reset_interrupt.Reset" display="     IWDT Reset Interrupt Request Select" id="config.bsp.s7g2.ssp.OFS0.iwdt_reset_interrupt">
+			 <option display="NMI request or interrupt request is enabled" id="config.bsp.s7g2.ssp.OFS0.iwdt_reset_interrupt.NMI" value="0 &lt;&lt; 12"/>
+			 <option display="Reset is enabled" id="config.bsp.s7g2.ssp.OFS0.iwdt_reset_interrupt.Reset" value="1 &lt;&lt; 12"/>
+		</property>
+		<property default="config.bsp.s7g2.ssp.OFS0.iwdt_stop_control.stops" display="     IWDT Stop Control" id="config.bsp.s7g2.ssp.OFS0.iwdt_stop_control">
+			 <option display="Counting continues (Note: Device will not enter Deep Standby Mode when selected. Device will enter Software Standby Mode)" id="config.bsp.s7g2.ssp.OFS0.iwdt_stop_control.continues" value="0 &lt;&lt; 14"/>
+			 <option display="Stop counting when in Sleep, Snooze mode, or Software Standby" id="config.bsp.s7g2.ssp.OFS0.iwdt_stop_control.stops" value="1 &lt;&lt; 14"/>
+		</property>
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_start_mode.register" display="     WDT Start Mode Select" id="config.bsp.s7g2.ssp.OFS0.wdt_start_mode">
+			 <option display="Automatically activate WDT after a reset (auto-start mode)" id="config.bsp.s7g2.ssp.OFS0.wdt_start_mode.auto" value="0 &lt;&lt; 17"/>
+			 <option display="Stop WDT after a reset (register-start mode)" id="config.bsp.s7g2.ssp.OFS0.wdt_start_mode.register" value="1 &lt;&lt; 17"/>
+		</property>
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_timeout.16384" display="     WDT Timeout Period" id="config.bsp.s7g2.ssp.OFS0.wdt_timeout">
+			 <option display="1024 cycles" id="config.bsp.s7g2.ssp.OFS0.wdt_timeout.1024" value="0 &lt;&lt; 18"/>
+			 <option display="4096 cycles" id="config.bsp.s7g2.ssp.OFS0.wdt_timeout.4096" value="1 &lt;&lt; 18"/>
+			 <option display="8192 cycles" id="config.bsp.s7g2.ssp.OFS0.wdt_timeout.8192" value="2 &lt;&lt; 18"/>
+			 <option display="16384 cycles" id="config.bsp.s7g2.ssp.OFS0.wdt_timeout.16384" value="3 &lt;&lt; 18"/>
+		</property>	
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_divisor.128" display="     WDT Clock Frequency Division Ratio" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor">
+			 <option display="4" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor.4" value="1 &lt;&lt; 20"/>
+			 <option display="64" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor.64" value="4 &lt;&lt; 20"/>
+			 <option display="128" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor.128" value="15 &lt;&lt; 20"/>
+			 <option display="512" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor.512" value="6 &lt;&lt; 20"/>
+			 <option display="2048" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor.2048" value="7 &lt;&lt; 20"/>
+			 <option display="8192" id="config.bsp.s7g2.ssp.OFS0.wdt_divisor.8192" value="8 &lt;&lt; 20"/>
+		</property>			
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_window_end.0" display="     WDT Window End Position" id="config.bsp.s7g2.ssp.OFS0.wdt_window_end">
+			 <option display="75%" id="config.bsp.s7g2.ssp.OFS0.wdt_window_end.75" value="0 &lt;&lt; 24"/>
+			 <option display="50%" id="config.bsp.s7g2.ssp.OFS0.wdt_window_end.50" value="1 &lt;&lt; 24"/>
+			 <option display="25%" id="config.bsp.s7g2.ssp.OFS0.wdt_window_end.25" value="2 &lt;&lt; 24"/>
+			 <option display=" 0% (no window end position)" id="config.bsp.s7g2.ssp.OFS0.wdt_window_end.0" value="3 &lt;&lt; 24"/>
+		</property>			
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_window_start.100" display="     WDT Window Start Position" id="config.bsp.s7g2.ssp.OFS0.wdt_window_start">
+			 <option display="25%" id="config.bsp.s7g2.ssp.OFS0.wdt_window_start.25" value="0 &lt;&lt; 26"/>
+			 <option display="50%" id="config.bsp.s7g2.ssp.OFS0.wdt_window_start.50" value="1 &lt;&lt; 26"/>
+			 <option display="75%" id="config.bsp.s7g2.ssp.OFS0.wdt_window_start.75" value="2 &lt;&lt; 26"/>
+			 <option display="100% (no window start position)" id="config.bsp.s7g2.ssp.OFS0.wdt_window_start.100" value="3 &lt;&lt; 26"/>
+		</property>	
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_reset_interrupt.Reset" display="     WDT Reset Interrupt Request" id="config.bsp.s7g2.ssp.OFS0.wdt_reset_interrupt">
+			 <option display="NMI" id="config.bsp.s7g2.ssp.OFS0.wdt_reset_interrupt.NMI" value="0 &lt;&lt; 28"/>
+			 <option display="Reset" id="config.bsp.s7g2.ssp.OFS0.wdt_reset_interrupt.Reset" value="1 &lt;&lt; 28"/>
+		</property>
+		<property default="config.bsp.s7g2.ssp.OFS0.wdt_stop_control.stops" display="     WDT Stop Control" id="config.bsp.s7g2.ssp.OFS0.wdt_stop_control">
+			 <option display="Counting continues" id="config.bsp.s7g2.ssp.OFS0.wdt_stop_control.continues" value="0 &lt;&lt; 30"/>
+			 <option display="Stop counting when entering Sleep mode" id="config.bsp.s7g2.ssp.OFS0.wdt_stop_control.stops" value="1 &lt;&lt; 30"/>
+		</property>		
+				
+       <property default="config.bsp.s7g2.ssp.OFS1_Register.default" display="OFS1 register settings" id="config.bsp.s7g2.ssp.OFS1">
+			<option display="Select fields below" id="config.bsp.s7g2.ssp.OFS1_Register.default" value="(0)"/>
+        </property>		
+		<property default="config.bsp.s7g2.ssp.OFS1.voltage_detection0.start.disabled" display="     Voltage Detection 0 Circuit Start" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0.start">
+			 <option display="Voltage monitor 0 reset is enabled after reset" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0.start.enabled" value="0 &lt;&lt; 2"/>
+			 <option display="Voltage monitor 0 reset is disabled after reset" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0.start.disabled" value="1 &lt;&lt; 2"/>
+		</property>
+		
+		<property default="config.bsp.s7g2.ssp.OFS1.voltage_detection0_level.280" display="     Voltage Detection 0 Level" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0_level">
+			 <option display="2.94 V" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0_level.294" value="1"/>
+			 <option display="2.87 V" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0_level.287" value="2"/>
+			 <option display="2.80 V" id="config.bsp.s7g2.ssp.OFS1.voltage_detection0_level.280" value="3"/>
+		</property>	
+						
+		<property default="config.bsp.s7g2.ssp.OFS1.hoco_osc.disabled" display="     HOCO OScillation Enable" id="config.bsp.s7g2.ssp.OFS1.hoco_osc">
+			 <option display="HOCO oscillation is enabled after reset" id="config.bsp.s7g2.ssp.OFS1.hoco_osc.enabled" value="0 &lt;&lt; 8"/>
+			 <option display="HOCO oscillation is disabled after reset" id="config.bsp.s7g2.ssp.OFS1.hoco_osc.disabled" value="1 &lt;&lt; 8"/>
+		</property>
+        <property id="config.bsp.ssp.mcu.adc.max_freq_hz" default="60000000"/>
+        <property id="config.bsp.ssp.mcu.sci_spi.max_bitrate" default="30000000"/>
+        <content>
+            #include "bsp_mcu_device_pn_cfg.h"
+            #include "bsp_mcu_device_cfg.h"
+            #include "../../../synergy/ssp/src/bsp/mcu/s7g2/bsp_mcu_info.h"
+            #include "bsp_clock_cfg.h"
+            #define BSP_MCU_GROUP_S7G2 (1)
+            #define BSP_LOCO_HZ                 (32768)
+            #define BSP_MOCO_HZ                 (8000000)
+            #define BSP_SUB_CLOCK_HZ            (32768)
+            #if   BSP_CFG_HOCO_FREQUENCY == 0
+                #define BSP_HOCO_HZ                 (16000000)
+            #elif BSP_CFG_HOCO_FREQUENCY == 1
+                #define BSP_HOCO_HZ                 (18000000)
+            #elif BSP_CFG_HOCO_FREQUENCY == 2
+                #define BSP_HOCO_HZ                 (20000000)
+            #else
+                #error "Invalid HOCO frequency chosen (BSP_CFG_HOCO_FREQUENCY) in bsp_clock_cfg.h"
+            #endif
+
+            #define BSP_CORTEX_VECTOR_TABLE_ENTRIES    (16U)
+            #define BSP_VECTOR_TABLE_MAX_ENTRIES       (112U)
+            #define BSP_MCU_VBATT_SUPPORT       (1)
+
+            #define OFS_SEQ1 0xA001A001 | (${config.bsp.s7g2.ssp.OFS0.iwdt_start_mode}) | (${config.bsp.s7g2.ssp.OFS0.iwdt_timeout})
+            #define OFS_SEQ2 (${config.bsp.s7g2.ssp.OFS0.iwdt_divisor}) | (${config.bsp.s7g2.ssp.OFS0.iwdt_window_end}) | (${config.bsp.s7g2.ssp.OFS0.iwdt_window_start})
+            #define OFS_SEQ3 (${config.bsp.s7g2.ssp.OFS0.iwdt_reset_interrupt}) | (${config.bsp.s7g2.ssp.OFS0.iwdt_stop_control}) | (${config.bsp.s7g2.ssp.OFS0.wdt_start_mode})
+            #define OFS_SEQ4 (${config.bsp.s7g2.ssp.OFS0.wdt_timeout}) |(${config.bsp.s7g2.ssp.OFS0.wdt_divisor}) | (${config.bsp.s7g2.ssp.OFS0.wdt_window_end}) | (${config.bsp.s7g2.ssp.OFS0.wdt_window_start})
+            #define OFS_SEQ5 (${config.bsp.s7g2.ssp.OFS0.wdt_reset_interrupt}) | (${config.bsp.s7g2.ssp.OFS0.wdt_stop_control})           
+            #define BSP_CFG_ROM_REG_OFS0 (OFS_SEQ1 | OFS_SEQ2 | OFS_SEQ3 | OFS_SEQ4 | OFS_SEQ5)           
+            #define BSP_CFG_ROM_REG_OFS1 (0xFFFFFEF8 | (${config.bsp.s7g2.ssp.OFS1.voltage_detection0.start}) | (${config.bsp.s7g2.ssp.OFS1.voltage_detection0_level}) |  (${config.bsp.s7g2.ssp.OFS1.hoco_osc}))
+        </content>
+    </config>   
+    <bsp id="bsp.s7g2.ssp" config="config.bsp.s7g2.ssp" display="S7G2 Family" version="0">
+        <provides interface="interface.mcu.flash_rv40f" />
+        <provides interface="interface.mcu.sce7" />
+        <enum default="module.driver.transfer.event.event_elc_software_event_0" id="enum.mcu.elc.event_list">
+            <option display="ADC0 COMPARE MATCH" id="module.driver.transfer.event.event_adc0_compare_match" value="ELC_EVENT_ADC0_COMPARE_MATCH" />
+            <option display="ADC0 COMPARE MISMATCH" id="module.driver.transfer.event.event_adc0_compare_mismatch" value="ELC_EVENT_ADC0_COMPARE_MISMATCH" />
+            <option display="ADC0 SCAN END" id="module.driver.transfer.event.event_adc0_scan_end" value="ELC_EVENT_ADC0_SCAN_END" />
+            <option display="ADC0 SCAN END B" id="module.driver.transfer.event.event_adc0_scan_end_b" value="ELC_EVENT_ADC0_SCAN_END_B" />
+            <option display="ADC0 WINDOW A" id="module.driver.transfer.event.event_adc0_window_a" value="ELC_EVENT_ADC0_WINDOW_A" />
+            <option display="ADC0 WINDOW B" id="module.driver.transfer.event.event_adc0_window_b" value="ELC_EVENT_ADC0_WINDOW_B" />
+            <option display="ADC1 COMPARE MATCH" id="module.driver.transfer.event.event_adc1_compare_match" value="ELC_EVENT_ADC1_COMPARE_MATCH" />
+            <option display="ADC1 COMPARE MISMATCH" id="module.driver.transfer.event.event_adc1_compare_mismatch" value="ELC_EVENT_ADC1_COMPARE_MISMATCH" />
+            <option display="ADC1 SCAN END" id="module.driver.transfer.event.event_adc1_scan_end" value="ELC_EVENT_ADC1_SCAN_END" />
+            <option display="ADC1 SCAN END B" id="module.driver.transfer.event.event_adc1_scan_end_b" value="ELC_EVENT_ADC1_SCAN_END_B" />
+            <option display="ADC1 WINDOW A" id="module.driver.transfer.event.event_adc1_window_a" value="ELC_EVENT_ADC1_WINDOW_A" />
+            <option display="ADC1 WINDOW B" id="module.driver.transfer.event.event_adc1_window_b" value="ELC_EVENT_ADC1_WINDOW_B" />
+            <option display="AGT0 COMPARE A" id="module.driver.transfer.event.event_agt0_compare_a" value="ELC_EVENT_AGT0_COMPARE_A" />
+            <option display="AGT0 COMPARE B" id="module.driver.transfer.event.event_agt0_compare_b" value="ELC_EVENT_AGT0_COMPARE_B" />
+            <option display="AGT0 INT" id="module.driver.transfer.event.event_agt0_int" value="ELC_EVENT_AGT0_INT" />
+            <option display="AGT1 COMPARE A" id="module.driver.transfer.event.event_agt1_compare_a" value="ELC_EVENT_AGT1_COMPARE_A" />
+            <option display="AGT1 COMPARE B" id="module.driver.transfer.event.event_agt1_compare_b" value="ELC_EVENT_AGT1_COMPARE_B" />
+            <option display="AGT1 INT" id="module.driver.transfer.event.event_agt1_int" value="ELC_EVENT_AGT1_INT" />
+            <option display="CAC FREQUENCY ERROR" id="module.driver.transfer.event.event_cac_frequency_error" value="ELC_EVENT_CAC_FREQUENCY_ERROR" />
+            <option display="CAC MEASUREMENT END" id="module.driver.transfer.event.event_cac_measurement_end" value="ELC_EVENT_CAC_MEASUREMENT_END" />
+            <option display="CAC OVERFLOW" id="module.driver.transfer.event.event_cac_overflow" value="ELC_EVENT_CAC_OVERFLOW" />
+            <option display="CAN0 ERROR" id="module.driver.transfer.event.event_can0_error" value="ELC_EVENT_CAN0_ERROR" />
+            <option display="CAN0 FIFO RX" id="module.driver.transfer.event.event_can0_fifo_rx" value="ELC_EVENT_CAN0_FIFO_RX" />
+            <option display="CAN0 FIFO TX" id="module.driver.transfer.event.event_can0_fifo_tx" value="ELC_EVENT_CAN0_FIFO_TX" />
+            <option display="CAN0 MAILBOX RX" id="module.driver.transfer.event.event_can0_mailbox_rx" value="ELC_EVENT_CAN0_MAILBOX_RX" />
+            <option display="CAN0 MAILBOX TX" id="module.driver.transfer.event.event_can0_mailbox_tx" value="ELC_EVENT_CAN0_MAILBOX_TX" />
+            <option display="CAN1 ERROR" id="module.driver.transfer.event.event_can1_error" value="ELC_EVENT_CAN1_ERROR" />
+            <option display="CAN1 FIFO RX" id="module.driver.transfer.event.event_can1_fifo_rx" value="ELC_EVENT_CAN1_FIFO_RX" />
+            <option display="CAN1 FIFO TX" id="module.driver.transfer.event.event_can1_fifo_tx" value="ELC_EVENT_CAN1_FIFO_TX" />
+            <option display="CAN1 MAILBOX RX" id="module.driver.transfer.event.event_can1_mailbox_rx" value="ELC_EVENT_CAN1_MAILBOX_RX" />
+            <option display="CAN1 MAILBOX TX" id="module.driver.transfer.event.event_can1_mailbox_tx" value="ELC_EVENT_CAN1_MAILBOX_TX" />
+            <option display="CGC MOSC STOP" id="module.driver.transfer.event.event_cgc_mosc_stop" value="ELC_EVENT_CGC_MOSC_STOP" />
+            <option display="COMP HS0 INT" id="module.driver.transfer.event.event_comp_hs_0" value="ELC_EVENT_COMP_HS0_INT" />
+            <option display="COMP HS1 INT" id="module.driver.transfer.event.event_comp_hs_1" value="ELC_EVENT_COMP_HS1_INT" />
+            <option display="COMP HS2 INT" id="module.driver.transfer.event.event_comp_hs_2" value="ELC_EVENT_COMP_HS2_INT" />
+            <option display="COMP HS3 INT" id="module.driver.transfer.event.event_comp_hs_3" value="ELC_EVENT_COMP_HS3_INT" />
+            <option display="COMP HS4 INT" id="module.driver.transfer.event.event_comp_hs_4" value="ELC_EVENT_COMP_HS4_INT" />
+            <option display="COMP HS5 INT" id="module.driver.transfer.event.event_comp_hs_5" value="ELC_EVENT_COMP_HS5_INT" />
+            <option display="CTSU END" id="module.driver.transfer.event.event_ctsu_end" value="ELC_EVENT_CTSU_END" />
+            <option display="CTSU READ" id="module.driver.transfer.event.event_ctsu_read" value="ELC_EVENT_CTSU_READ" />
+            <option display="CTSU WRITE" id="module.driver.transfer.event.event_ctsu_write" value="ELC_EVENT_CTSU_WRITE" />
+            <option display="DMAC0 INT" id="module.driver.transfer.event.event_dmac0_int" value="ELC_EVENT_DMAC0_INT" />
+            <option display="DMAC1 INT" id="module.driver.transfer.event.event_dmac1_int" value="ELC_EVENT_DMAC1_INT" />
+            <option display="DMAC2 INT" id="module.driver.transfer.event.event_dmac2_int" value="ELC_EVENT_DMAC2_INT" />
+            <option display="DMAC3 INT" id="module.driver.transfer.event.event_dmac3_int" value="ELC_EVENT_DMAC3_INT" />
+            <option display="DMAC4 INT" id="module.driver.transfer.event.event_dmac4_int" value="ELC_EVENT_DMAC4_INT" />
+            <option display="DMAC5 INT" id="module.driver.transfer.event.event_dmac5_int" value="ELC_EVENT_DMAC5_INT" />
+            <option display="DMAC6 INT" id="module.driver.transfer.event.event_dmac6_int" value="ELC_EVENT_DMAC6_INT" />
+            <option display="DMAC7 INT" id="module.driver.transfer.event.event_dmac7_int" value="ELC_EVENT_DMAC7_INT" />
+            <option display="DOC INT" id="module.driver.transfer.event.event_doc_int" value="ELC_EVENT_DOC_INT" />
+            <option display="DRW INT" id="module.driver.transfer.event.event_drw_int" value="ELC_EVENT_DRW_INT" />
+            <option display="DTC COMPLETE" id="module.driver.transfer.event.event_dtc_complete" value="ELC_EVENT_DTC_COMPLETE" />
+            <option display="DTC END" id="module.driver.transfer.event.event_dtc_end" value="ELC_EVENT_DTC_END" />
+            <option display="EDMAC0 EINT" id="module.driver.transfer.event.event_edmac0_eint" value="ELC_EVENT_EDMAC0_EINT" />
+            <option display="EDMAC1 EINT" id="module.driver.transfer.event.event_edmac1_eint" value="ELC_EVENT_EDMAC1_EINT" />
+            <option display="ELC SOFTWARE EVENT 0" id="module.driver.transfer.event.event_elc_software_event_0" value="ELC_EVENT_ELC_SOFTWARE_EVENT_0" />
+            <option display="ELC SOFTWARE EVENT 1" id="module.driver.transfer.event.event_elc_software_event_1" value="ELC_EVENT_ELC_SOFTWARE_EVENT_1" />
+            <option display="EPTPC IPLS" id="module.driver.transfer.event.event_eptpc_ipls" value="ELC_EVENT_EPTPC_IPLS" />
+            <option display="EPTPC MINT" id="module.driver.transfer.event.event_eptpc_mint" value="ELC_EVENT_EPTPC_MINT" />
+            <option display="EPTPC PINT" id="module.driver.transfer.event.event_eptpc_pint" value="ELC_EVENT_EPTPC_PINT" />
+            <option display="EPTPC TIMER0 FALL" id="module.driver.transfer.event.event_eptpc_timer0_fall" value="ELC_EVENT_EPTPC_TIMER0_FALL" />
+            <option display="EPTPC TIMER0 RISE" id="module.driver.transfer.event.event_eptpc_timer0_rise" value="ELC_EVENT_EPTPC_TIMER0_RISE" />
+            <option display="EPTPC TIMER1 FALL" id="module.driver.transfer.event.event_eptpc_timer1_fall" value="ELC_EVENT_EPTPC_TIMER1_FALL" />
+            <option display="EPTPC TIMER1 RISE" id="module.driver.transfer.event.event_eptpc_timer1_rise" value="ELC_EVENT_EPTPC_TIMER1_RISE" />
+            <option display="EPTPC TIMER2 FALL" id="module.driver.transfer.event.event_eptpc_timer2_fall" value="ELC_EVENT_EPTPC_TIMER2_FALL" />
+            <option display="EPTPC TIMER2 RISE" id="module.driver.transfer.event.event_eptpc_timer2_rise" value="ELC_EVENT_EPTPC_TIMER2_RISE" />
+            <option display="EPTPC TIMER3 FALL" id="module.driver.transfer.event.event_eptpc_timer3_fall" value="ELC_EVENT_EPTPC_TIMER3_FALL" />
+            <option display="EPTPC TIMER3 RISE" id="module.driver.transfer.event.event_eptpc_timer3_rise" value="ELC_EVENT_EPTPC_TIMER3_RISE" />
+            <option display="EPTPC TIMER4 FALL" id="module.driver.transfer.event.event_eptpc_timer4_fall" value="ELC_EVENT_EPTPC_TIMER4_FALL" />
+            <option display="EPTPC TIMER4 RISE" id="module.driver.transfer.event.event_eptpc_timer4_rise" value="ELC_EVENT_EPTPC_TIMER4_RISE" />
+            <option display="EPTPC TIMER5 FALL" id="module.driver.transfer.event.event_eptpc_timer5_fall" value="ELC_EVENT_EPTPC_TIMER5_FALL" />
+            <option display="EPTPC TIMER5 RISE" id="module.driver.transfer.event.event_eptpc_timer5_rise" value="ELC_EVENT_EPTPC_TIMER5_RISE" />
+            <option display="FCU FIFERR" id="module.driver.transfer.event.event_fcu_fiferr" value="ELC_EVENT_FCU_FIFERR" />
+            <option display="FCU FRDYI" id="module.driver.transfer.event.event_fcu_frdyi" value="ELC_EVENT_FCU_FRDYI" />
+            <option display="GLCDC LINE DETECT" id="module.driver.transfer.event.event_glcdc_line_detect" value="ELC_EVENT_GLCDC_LINE_DETECT" />
+            <option display="GLCDC UNDERFLOW 1" id="module.driver.transfer.event.event_glcdc_underflow_1" value="ELC_EVENT_GLCDC_UNDERFLOW_1" />
+            <option display="GLCDC UNDERFLOW 2" id="module.driver.transfer.event.event_glcdc_underflow_2" value="ELC_EVENT_GLCDC_UNDERFLOW_2" />
+            <option display="GPT0 AD TRIG A" id="module.driver.transfer.event.event_gpt0_ad_trig_a" value="ELC_EVENT_GPT0_AD_TRIG_A" />
+            <option display="GPT0 AD TRIG B" id="module.driver.transfer.event.event_gpt0_ad_trig_b" value="ELC_EVENT_GPT0_AD_TRIG_B" />
+            <option display="GPT0 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt0_capture_compare_a" value="ELC_EVENT_GPT0_CAPTURE_COMPARE_A" />
+            <option display="GPT0 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt0_capture_compare_b" value="ELC_EVENT_GPT0_CAPTURE_COMPARE_B" />
+            <option display="GPT0 COMPARE C" id="module.driver.transfer.event.event_gpt0_compare_c" value="ELC_EVENT_GPT0_COMPARE_C" />
+            <option display="GPT0 COMPARE D" id="module.driver.transfer.event.event_gpt0_compare_d" value="ELC_EVENT_GPT0_COMPARE_D" />
+            <option display="GPT0 COMPARE E" id="module.driver.transfer.event.event_gpt0_compare_e" value="ELC_EVENT_GPT0_COMPARE_E" />
+            <option display="GPT0 COMPARE F" id="module.driver.transfer.event.event_gpt0_compare_f" value="ELC_EVENT_GPT0_COMPARE_F" />
+            <option display="GPT0 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt0_counter_overflow" value="ELC_EVENT_GPT0_COUNTER_OVERFLOW" />
+            <option display="GPT0 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt0_counter_underflow" value="ELC_EVENT_GPT0_COUNTER_UNDERFLOW" />
+            <option display="GPT10 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt10_capture_compare_a" value="ELC_EVENT_GPT10_CAPTURE_COMPARE_A" />
+            <option display="GPT10 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt10_capture_compare_b" value="ELC_EVENT_GPT10_CAPTURE_COMPARE_B" />
+            <option display="GPT10 COMPARE C" id="module.driver.transfer.event.event_gpt10_compare_c" value="ELC_EVENT_GPT10_COMPARE_C" />
+            <option display="GPT10 COMPARE D" id="module.driver.transfer.event.event_gpt10_compare_d" value="ELC_EVENT_GPT10_COMPARE_D" />
+            <option display="GPT10 COMPARE E" id="module.driver.transfer.event.event_gpt10_compare_e" value="ELC_EVENT_GPT10_COMPARE_E" />
+            <option display="GPT10 COMPARE F" id="module.driver.transfer.event.event_gpt10_compare_f" value="ELC_EVENT_GPT10_COMPARE_F" />
+            <option display="GPT10 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt10_counter_overflow" value="ELC_EVENT_GPT10_COUNTER_OVERFLOW" />
+            <option display="GPT10 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt10_counter_underflow" value="ELC_EVENT_GPT10_COUNTER_UNDERFLOW" />
+            <option display="GPT11 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt11_capture_compare_a" value="ELC_EVENT_GPT11_CAPTURE_COMPARE_A" />
+            <option display="GPT11 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt11_capture_compare_b" value="ELC_EVENT_GPT11_CAPTURE_COMPARE_B" />
+            <option display="GPT11 COMPARE C" id="module.driver.transfer.event.event_gpt11_compare_c" value="ELC_EVENT_GPT11_COMPARE_C" />
+            <option display="GPT11 COMPARE D" id="module.driver.transfer.event.event_gpt11_compare_d" value="ELC_EVENT_GPT11_COMPARE_D" />
+            <option display="GPT11 COMPARE E" id="module.driver.transfer.event.event_gpt11_compare_e" value="ELC_EVENT_GPT11_COMPARE_E" />
+            <option display="GPT11 COMPARE F" id="module.driver.transfer.event.event_gpt11_compare_f" value="ELC_EVENT_GPT11_COMPARE_F" />
+            <option display="GPT11 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt11_counter_overflow" value="ELC_EVENT_GPT11_COUNTER_OVERFLOW" />
+            <option display="GPT11 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt11_counter_underflow" value="ELC_EVENT_GPT11_COUNTER_UNDERFLOW" />
+            <option display="GPT12 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt12_capture_compare_a" value="ELC_EVENT_GPT12_CAPTURE_COMPARE_A" />
+            <option display="GPT12 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt12_capture_compare_b" value="ELC_EVENT_GPT12_CAPTURE_COMPARE_B" />
+            <option display="GPT12 COMPARE C" id="module.driver.transfer.event.event_gpt12_compare_c" value="ELC_EVENT_GPT12_COMPARE_C" />
+            <option display="GPT12 COMPARE D" id="module.driver.transfer.event.event_gpt12_compare_d" value="ELC_EVENT_GPT12_COMPARE_D" />
+            <option display="GPT12 COMPARE E" id="module.driver.transfer.event.event_gpt12_compare_e" value="ELC_EVENT_GPT12_COMPARE_E" />
+            <option display="GPT12 COMPARE F" id="module.driver.transfer.event.event_gpt12_compare_f" value="ELC_EVENT_GPT12_COMPARE_F" />
+            <option display="GPT12 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt12_counter_overflow" value="ELC_EVENT_GPT12_COUNTER_OVERFLOW" />
+            <option display="GPT12 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt12_counter_underflow" value="ELC_EVENT_GPT12_COUNTER_UNDERFLOW" />
+            <option display="GPT13 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt13_capture_compare_a" value="ELC_EVENT_GPT13_CAPTURE_COMPARE_A" />
+            <option display="GPT13 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt13_capture_compare_b" value="ELC_EVENT_GPT13_CAPTURE_COMPARE_B" />
+            <option display="GPT13 COMPARE C" id="module.driver.transfer.event.event_gpt13_compare_c" value="ELC_EVENT_GPT13_COMPARE_C" />
+            <option display="GPT13 COMPARE D" id="module.driver.transfer.event.event_gpt13_compare_d" value="ELC_EVENT_GPT13_COMPARE_D" />
+            <option display="GPT13 COMPARE E" id="module.driver.transfer.event.event_gpt13_compare_e" value="ELC_EVENT_GPT13_COMPARE_E" />
+            <option display="GPT13 COMPARE F" id="module.driver.transfer.event.event_gpt13_compare_f" value="ELC_EVENT_GPT13_COMPARE_F" />
+            <option display="GPT13 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt13_counter_overflow" value="ELC_EVENT_GPT13_COUNTER_OVERFLOW" />
+            <option display="GPT13 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt13_counter_underflow" value="ELC_EVENT_GPT13_COUNTER_UNDERFLOW" />
+            <option display="GPT1 AD TRIG A" id="module.driver.transfer.event.event_gpt1_ad_trig_a" value="ELC_EVENT_GPT1_AD_TRIG_A" />
+            <option display="GPT1 AD TRIG B" id="module.driver.transfer.event.event_gpt1_ad_trig_b" value="ELC_EVENT_GPT1_AD_TRIG_B" />
+            <option display="GPT1 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt1_capture_compare_a" value="ELC_EVENT_GPT1_CAPTURE_COMPARE_A" />
+            <option display="GPT1 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt1_capture_compare_b" value="ELC_EVENT_GPT1_CAPTURE_COMPARE_B" />
+            <option display="GPT1 COMPARE C" id="module.driver.transfer.event.event_gpt1_compare_c" value="ELC_EVENT_GPT1_COMPARE_C" />
+            <option display="GPT1 COMPARE D" id="module.driver.transfer.event.event_gpt1_compare_d" value="ELC_EVENT_GPT1_COMPARE_D" />
+            <option display="GPT1 COMPARE E" id="module.driver.transfer.event.event_gpt1_compare_e" value="ELC_EVENT_GPT1_COMPARE_E" />
+            <option display="GPT1 COMPARE F" id="module.driver.transfer.event.event_gpt1_compare_f" value="ELC_EVENT_GPT1_COMPARE_F" />
+            <option display="GPT1 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt1_counter_overflow" value="ELC_EVENT_GPT1_COUNTER_OVERFLOW" />
+            <option display="GPT1 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt1_counter_underflow" value="ELC_EVENT_GPT1_COUNTER_UNDERFLOW" />
+            <option display="GPT2 AD TRIG A" id="module.driver.transfer.event.event_gpt2_ad_trig_a" value="ELC_EVENT_GPT2_AD_TRIG_A" />
+            <option display="GPT2 AD TRIG B" id="module.driver.transfer.event.event_gpt2_ad_trig_b" value="ELC_EVENT_GPT2_AD_TRIG_B" />
+            <option display="GPT2 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt2_capture_compare_a" value="ELC_EVENT_GPT2_CAPTURE_COMPARE_A" />
+            <option display="GPT2 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt2_capture_compare_b" value="ELC_EVENT_GPT2_CAPTURE_COMPARE_B" />
+            <option display="GPT2 COMPARE C" id="module.driver.transfer.event.event_gpt2_compare_c" value="ELC_EVENT_GPT2_COMPARE_C" />
+            <option display="GPT2 COMPARE D" id="module.driver.transfer.event.event_gpt2_compare_d" value="ELC_EVENT_GPT2_COMPARE_D" />
+            <option display="GPT2 COMPARE E" id="module.driver.transfer.event.event_gpt2_compare_e" value="ELC_EVENT_GPT2_COMPARE_E" />
+            <option display="GPT2 COMPARE F" id="module.driver.transfer.event.event_gpt2_compare_f" value="ELC_EVENT_GPT2_COMPARE_F" />
+            <option display="GPT2 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt2_counter_overflow" value="ELC_EVENT_GPT2_COUNTER_OVERFLOW" />
+            <option display="GPT2 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt2_counter_underflow" value="ELC_EVENT_GPT2_COUNTER_UNDERFLOW" />
+            <option display="GPT3 AD TRIG A" id="module.driver.transfer.event.event_gpt3_ad_trig_a" value="ELC_EVENT_GPT3_AD_TRIG_A" />
+            <option display="GPT3 AD TRIG B" id="module.driver.transfer.event.event_gpt3_ad_trig_b" value="ELC_EVENT_GPT3_AD_TRIG_B" />
+            <option display="GPT3 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt3_capture_compare_a" value="ELC_EVENT_GPT3_CAPTURE_COMPARE_A" />
+            <option display="GPT3 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt3_capture_compare_b" value="ELC_EVENT_GPT3_CAPTURE_COMPARE_B" />
+            <option display="GPT3 COMPARE C" id="module.driver.transfer.event.event_gpt3_compare_c" value="ELC_EVENT_GPT3_COMPARE_C" />
+            <option display="GPT3 COMPARE D" id="module.driver.transfer.event.event_gpt3_compare_d" value="ELC_EVENT_GPT3_COMPARE_D" />
+            <option display="GPT3 COMPARE E" id="module.driver.transfer.event.event_gpt3_compare_e" value="ELC_EVENT_GPT3_COMPARE_E" />
+            <option display="GPT3 COMPARE F" id="module.driver.transfer.event.event_gpt3_compare_f" value="ELC_EVENT_GPT3_COMPARE_F" />
+            <option display="GPT3 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt3_counter_overflow" value="ELC_EVENT_GPT3_COUNTER_OVERFLOW" />
+            <option display="GPT3 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt3_counter_underflow" value="ELC_EVENT_GPT3_COUNTER_UNDERFLOW" />
+            <option display="GPT4 AD TRIG A" id="module.driver.transfer.event.event_gpt4_ad_trig_a" value="ELC_EVENT_GPT4_AD_TRIG_A" />
+            <option display="GPT4 AD TRIG B" id="module.driver.transfer.event.event_gpt4_ad_trig_b" value="ELC_EVENT_GPT4_AD_TRIG_B" />
+            <option display="GPT4 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt4_capture_compare_a" value="ELC_EVENT_GPT4_CAPTURE_COMPARE_A" />
+            <option display="GPT4 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt4_capture_compare_b" value="ELC_EVENT_GPT4_CAPTURE_COMPARE_B" />
+            <option display="GPT4 COMPARE C" id="module.driver.transfer.event.event_gpt4_compare_c" value="ELC_EVENT_GPT4_COMPARE_C" />
+            <option display="GPT4 COMPARE D" id="module.driver.transfer.event.event_gpt4_compare_d" value="ELC_EVENT_GPT4_COMPARE_D" />
+            <option display="GPT4 COMPARE E" id="module.driver.transfer.event.event_gpt4_compare_e" value="ELC_EVENT_GPT4_COMPARE_E" />
+            <option display="GPT4 COMPARE F" id="module.driver.transfer.event.event_gpt4_compare_f" value="ELC_EVENT_GPT4_COMPARE_F" />
+            <option display="GPT4 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt4_counter_overflow" value="ELC_EVENT_GPT4_COUNTER_OVERFLOW" />
+            <option display="GPT4 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt4_counter_underflow" value="ELC_EVENT_GPT4_COUNTER_UNDERFLOW" />
+            <option display="GPT5 AD TRIG A" id="module.driver.transfer.event.event_gpt5_ad_trig_a" value="ELC_EVENT_GPT5_AD_TRIG_A" />
+            <option display="GPT5 AD TRIG B" id="module.driver.transfer.event.event_gpt5_ad_trig_b" value="ELC_EVENT_GPT5_AD_TRIG_B" />
+            <option display="GPT5 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt5_capture_compare_a" value="ELC_EVENT_GPT5_CAPTURE_COMPARE_A" />
+            <option display="GPT5 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt5_capture_compare_b" value="ELC_EVENT_GPT5_CAPTURE_COMPARE_B" />
+            <option display="GPT5 COMPARE C" id="module.driver.transfer.event.event_gpt5_compare_c" value="ELC_EVENT_GPT5_COMPARE_C" />
+            <option display="GPT5 COMPARE D" id="module.driver.transfer.event.event_gpt5_compare_d" value="ELC_EVENT_GPT5_COMPARE_D" />
+            <option display="GPT5 COMPARE E" id="module.driver.transfer.event.event_gpt5_compare_e" value="ELC_EVENT_GPT5_COMPARE_E" />
+            <option display="GPT5 COMPARE F" id="module.driver.transfer.event.event_gpt5_compare_f" value="ELC_EVENT_GPT5_COMPARE_F" />
+            <option display="GPT5 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt5_counter_overflow" value="ELC_EVENT_GPT5_COUNTER_OVERFLOW" />
+            <option display="GPT5 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt5_counter_underflow" value="ELC_EVENT_GPT5_COUNTER_UNDERFLOW" />
+            <option display="GPT6 AD TRIG A" id="module.driver.transfer.event.event_gpt6_ad_trig_a" value="ELC_EVENT_GPT6_AD_TRIG_A" />
+            <option display="GPT6 AD TRIG B" id="module.driver.transfer.event.event_gpt6_ad_trig_b" value="ELC_EVENT_GPT6_AD_TRIG_B" />
+            <option display="GPT6 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt6_capture_compare_a" value="ELC_EVENT_GPT6_CAPTURE_COMPARE_A" />
+            <option display="GPT6 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt6_capture_compare_b" value="ELC_EVENT_GPT6_CAPTURE_COMPARE_B" />
+            <option display="GPT6 COMPARE C" id="module.driver.transfer.event.event_gpt6_compare_c" value="ELC_EVENT_GPT6_COMPARE_C" />
+            <option display="GPT6 COMPARE D" id="module.driver.transfer.event.event_gpt6_compare_d" value="ELC_EVENT_GPT6_COMPARE_D" />
+            <option display="GPT6 COMPARE E" id="module.driver.transfer.event.event_gpt6_compare_e" value="ELC_EVENT_GPT6_COMPARE_E" />
+            <option display="GPT6 COMPARE F" id="module.driver.transfer.event.event_gpt6_compare_f" value="ELC_EVENT_GPT6_COMPARE_F" />
+            <option display="GPT6 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt6_counter_overflow" value="ELC_EVENT_GPT6_COUNTER_OVERFLOW" />
+            <option display="GPT6 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt6_counter_underflow" value="ELC_EVENT_GPT6_COUNTER_UNDERFLOW" />
+            <option display="GPT7 AD TRIG A" id="module.driver.transfer.event.event_gpt7_ad_trig_a" value="ELC_EVENT_GPT7_AD_TRIG_A" />
+            <option display="GPT7 AD TRIG B" id="module.driver.transfer.event.event_gpt7_ad_trig_b" value="ELC_EVENT_GPT7_AD_TRIG_B" />
+            <option display="GPT7 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt7_capture_compare_a" value="ELC_EVENT_GPT7_CAPTURE_COMPARE_A" />
+            <option display="GPT7 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt7_capture_compare_b" value="ELC_EVENT_GPT7_CAPTURE_COMPARE_B" />
+            <option display="GPT7 COMPARE C" id="module.driver.transfer.event.event_gpt7_compare_c" value="ELC_EVENT_GPT7_COMPARE_C" />
+            <option display="GPT7 COMPARE D" id="module.driver.transfer.event.event_gpt7_compare_d" value="ELC_EVENT_GPT7_COMPARE_D" />
+            <option display="GPT7 COMPARE E" id="module.driver.transfer.event.event_gpt7_compare_e" value="ELC_EVENT_GPT7_COMPARE_E" />
+            <option display="GPT7 COMPARE F" id="module.driver.transfer.event.event_gpt7_compare_f" value="ELC_EVENT_GPT7_COMPARE_F" />
+            <option display="GPT7 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt7_counter_overflow" value="ELC_EVENT_GPT7_COUNTER_OVERFLOW" />
+            <option display="GPT7 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt7_counter_underflow" value="ELC_EVENT_GPT7_COUNTER_UNDERFLOW" />
+            <option display="GPT8 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt8_capture_compare_a" value="ELC_EVENT_GPT8_CAPTURE_COMPARE_A" />
+            <option display="GPT8 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt8_capture_compare_b" value="ELC_EVENT_GPT8_CAPTURE_COMPARE_B" />
+            <option display="GPT8 COMPARE C" id="module.driver.transfer.event.event_gpt8_compare_c" value="ELC_EVENT_GPT8_COMPARE_C" />
+            <option display="GPT8 COMPARE D" id="module.driver.transfer.event.event_gpt8_compare_d" value="ELC_EVENT_GPT8_COMPARE_D" />
+            <option display="GPT8 COMPARE E" id="module.driver.transfer.event.event_gpt8_compare_e" value="ELC_EVENT_GPT8_COMPARE_E" />
+            <option display="GPT8 COMPARE F" id="module.driver.transfer.event.event_gpt8_compare_f" value="ELC_EVENT_GPT8_COMPARE_F" />
+            <option display="GPT8 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt8_counter_overflow" value="ELC_EVENT_GPT8_COUNTER_OVERFLOW" />
+            <option display="GPT8 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt8_counter_underflow" value="ELC_EVENT_GPT8_COUNTER_UNDERFLOW" />
+            <option display="GPT9 CAPTURE COMPARE A" id="module.driver.transfer.event.event_gpt9_capture_compare_a" value="ELC_EVENT_GPT9_CAPTURE_COMPARE_A" />
+            <option display="GPT9 CAPTURE COMPARE B" id="module.driver.transfer.event.event_gpt9_capture_compare_b" value="ELC_EVENT_GPT9_CAPTURE_COMPARE_B" />
+            <option display="GPT9 COMPARE C" id="module.driver.transfer.event.event_gpt9_compare_c" value="ELC_EVENT_GPT9_COMPARE_C" />
+            <option display="GPT9 COMPARE D" id="module.driver.transfer.event.event_gpt9_compare_d" value="ELC_EVENT_GPT9_COMPARE_D" />
+            <option display="GPT9 COMPARE E" id="module.driver.transfer.event.event_gpt9_compare_e" value="ELC_EVENT_GPT9_COMPARE_E" />
+            <option display="GPT9 COMPARE F" id="module.driver.transfer.event.event_gpt9_compare_f" value="ELC_EVENT_GPT9_COMPARE_F" />
+            <option display="GPT9 COUNTER OVERFLOW" id="module.driver.transfer.event.event_gpt9_counter_overflow" value="ELC_EVENT_GPT9_COUNTER_OVERFLOW" />
+            <option display="GPT9 COUNTER UNDERFLOW" id="module.driver.transfer.event.event_gpt9_counter_underflow" value="ELC_EVENT_GPT9_COUNTER_UNDERFLOW" />
+            <option display="ICU IRQ0" id="module.driver.transfer.event.event_icu_irq0" value="ELC_EVENT_ICU_IRQ0" />
+            <option display="ICU IRQ1" id="module.driver.transfer.event.event_icu_irq1" value="ELC_EVENT_ICU_IRQ1" />
+            <option display="ICU IRQ10" id="module.driver.transfer.event.event_icu_irq10" value="ELC_EVENT_ICU_IRQ10" />
+            <option display="ICU IRQ11" id="module.driver.transfer.event.event_icu_irq11" value="ELC_EVENT_ICU_IRQ11" />
+            <option display="ICU IRQ12" id="module.driver.transfer.event.event_icu_irq12" value="ELC_EVENT_ICU_IRQ12" />
+            <option display="ICU IRQ13" id="module.driver.transfer.event.event_icu_irq13" value="ELC_EVENT_ICU_IRQ13" />
+            <option display="ICU IRQ14" id="module.driver.transfer.event.event_icu_irq14" value="ELC_EVENT_ICU_IRQ14" />
+            <option display="ICU IRQ15" id="module.driver.transfer.event.event_icu_irq15" value="ELC_EVENT_ICU_IRQ15" />
+            <option display="ICU IRQ2" id="module.driver.transfer.event.event_icu_irq2" value="ELC_EVENT_ICU_IRQ2" />
+            <option display="ICU IRQ3" id="module.driver.transfer.event.event_icu_irq3" value="ELC_EVENT_ICU_IRQ3" />
+            <option display="ICU IRQ4" id="module.driver.transfer.event.event_icu_irq4" value="ELC_EVENT_ICU_IRQ4" />
+            <option display="ICU IRQ5" id="module.driver.transfer.event.event_icu_irq5" value="ELC_EVENT_ICU_IRQ5" />
+            <option display="ICU IRQ6" id="module.driver.transfer.event.event_icu_irq6" value="ELC_EVENT_ICU_IRQ6" />
+            <option display="ICU IRQ7" id="module.driver.transfer.event.event_icu_irq7" value="ELC_EVENT_ICU_IRQ7" />
+            <option display="ICU IRQ8" id="module.driver.transfer.event.event_icu_irq8" value="ELC_EVENT_ICU_IRQ8" />
+            <option display="ICU IRQ9" id="module.driver.transfer.event.event_icu_irq9" value="ELC_EVENT_ICU_IRQ9" />
+            <option display="ICU SNOOZE CANCEL" id="module.driver.transfer.event.event_icu_snooze_cancel" value="ELC_EVENT_ICU_SNOOZE_CANCEL" />
+            <option display="IIC0 ERI" id="module.driver.transfer.event.event_iic0_eri" value="ELC_EVENT_IIC0_ERI" />
+            <option display="IIC0 RXI" id="module.driver.transfer.event.event_iic0_rxi" value="ELC_EVENT_IIC0_RXI" />
+            <option display="IIC0 TEI" id="module.driver.transfer.event.event_iic0_tei" value="ELC_EVENT_IIC0_TEI" />
+            <option display="IIC0 TXI" id="module.driver.transfer.event.event_iic0_txi" value="ELC_EVENT_IIC0_TXI" />
+            <option display="IIC0 WUI" id="module.driver.transfer.event.event_iic0_wui" value="ELC_EVENT_IIC0_WUI" />
+            <option display="IIC1 ERI" id="module.driver.transfer.event.event_iic1_eri" value="ELC_EVENT_IIC1_ERI" />
+            <option display="IIC1 RXI" id="module.driver.transfer.event.event_iic1_rxi" value="ELC_EVENT_IIC1_RXI" />
+            <option display="IIC1 TEI" id="module.driver.transfer.event.event_iic1_tei" value="ELC_EVENT_IIC1_TEI" />
+            <option display="IIC1 TXI" id="module.driver.transfer.event.event_iic1_txi" value="ELC_EVENT_IIC1_TXI" />
+            <option display="IIC2 ERI" id="module.driver.transfer.event.event_iic2_eri" value="ELC_EVENT_IIC2_ERI" />
+            <option display="IIC2 RXI" id="module.driver.transfer.event.event_iic2_rxi" value="ELC_EVENT_IIC2_RXI" />
+            <option display="IIC2 TEI" id="module.driver.transfer.event.event_iic2_tei" value="ELC_EVENT_IIC2_TEI" />
+            <option display="IIC2 TXI" id="module.driver.transfer.event.event_iic2_txi" value="ELC_EVENT_IIC2_TXI" />
+            <option display="IOPORT EVENT 1" id="module.driver.transfer.event.event_ioport_event_1" value="ELC_EVENT_IOPORT_EVENT_1" />
+            <option display="IOPORT EVENT 2" id="module.driver.transfer.event.event_ioport_event_2" value="ELC_EVENT_IOPORT_EVENT_2" />
+            <option display="IOPORT EVENT 3" id="module.driver.transfer.event.event_ioport_event_3" value="ELC_EVENT_IOPORT_EVENT_3" />
+            <option display="IOPORT EVENT 4" id="module.driver.transfer.event.event_ioport_event_4" value="ELC_EVENT_IOPORT_EVENT_4" />
+            <option display="IWDT UNDERFLOW" id="module.driver.transfer.event.event_iwdt_underflow" value="ELC_EVENT_IWDT_UNDERFLOW" />
+            <option display="JPEG JDTI" id="module.driver.transfer.event.event_jpeg_jdti" value="ELC_EVENT_JPEG_JDTI" />
+            <option display="JPEG JEDI" id="module.driver.transfer.event.event_jpeg_jedi" value="ELC_EVENT_JPEG_JEDI" />
+            <option display="KEY INT" id="module.driver.transfer.event.event_key_int" value="ELC_EVENT_KEY_INT" />
+            <option display="LPM SNOOZE REQUEST" id="module.driver.transfer.event.event_lpm_snooze_request" value="ELC_EVENT_LPM_SNOOZE_REQUEST" />
+            <option display="LVD LVD1" id="module.driver.transfer.event.event_lvd_lvd1" value="ELC_EVENT_LVD_LVD1" />
+            <option display="LVD LVD2" id="module.driver.transfer.event.event_lvd_lvd2" value="ELC_EVENT_LVD_LVD2" />
+            <option display="OPS UVW EDGE" id="module.driver.transfer.event.event_ops_uvw_edge" value="ELC_EVENT_OPS_UVW_EDGE" />
+            <option display="PDC FRAME END" id="module.driver.transfer.event.event_pdc_frame_end" value="ELC_EVENT_PDC_FRAME_END" />
+            <option display="PDC INT" id="module.driver.transfer.event.event_pdc_int" value="ELC_EVENT_PDC_INT" />
+            <option display="PDC RECEIVE DATA READY" id="module.driver.transfer.event.event_pdc_receive_data_ready" value="ELC_EVENT_PDC_RECEIVE_DATA_READY" />
+            <option display="POEG0 EVENT" id="module.driver.transfer.event.event_poeg0_event" value="ELC_EVENT_POEG0_EVENT" />
+            <option display="POEG1 EVENT" id="module.driver.transfer.event.event_poeg1_event" value="ELC_EVENT_POEG1_EVENT" />
+            <option display="POEG2 EVENT" id="module.driver.transfer.event.event_poeg2_event" value="ELC_EVENT_POEG2_EVENT" />
+            <option display="POEG3 EVENT" id="module.driver.transfer.event.event_poeg3_event" value="ELC_EVENT_POEG3_EVENT" />
+            <option display="QSPI INT" id="module.driver.transfer.event.event_qspi_int" value="ELC_EVENT_QSPI_INT" />
+            <option display="RTC ALARM" id="module.driver.transfer.event.event_rtc_alarm" value="ELC_EVENT_RTC_ALARM" />
+            <option display="RTC CARRY" id="module.driver.transfer.event.event_rtc_carry" value="ELC_EVENT_RTC_CARRY" />
+            <option display="RTC PERIOD" id="module.driver.transfer.event.event_rtc_period" value="ELC_EVENT_RTC_PERIOD" />
+            <option display="SCE INTEGRATE RDRDY" id="module.driver.transfer.event.event_sce_integrate_rdrdy" value="ELC_EVENT_SCE_INTEGRATE_RDRDY" />
+            <option display="SCE INTEGRATE WRRDY" id="module.driver.transfer.event.event_sce_integrate_wrrdy" value="ELC_EVENT_SCE_INTEGRATE_WRRDY" />
+            <option display="SCE LONG PLG" id="module.driver.transfer.event.event_sce_long_plg" value="ELC_EVENT_SCE_LONG_PLG" />
+            <option display="SCE PROC BUSY" id="module.driver.transfer.event.event_sce_proc_busy" value="ELC_EVENT_SCE_PROC_BUSY" />
+            <option display="SCE RDRDY 0" id="module.driver.transfer.event.event_sce_rdrdy_0" value="ELC_EVENT_SCE_RDRDY_0" />
+            <option display="SCE RDRDY 1" id="module.driver.transfer.event.event_sce_rdrdy_1" value="ELC_EVENT_SCE_RDRDY_1" />
+            <option display="SCE ROMOK" id="module.driver.transfer.event.event_sce_romok" value="ELC_EVENT_SCE_ROMOK" />
+            <option display="SCE TEST BUSY" id="module.driver.transfer.event.event_sce_test_busy" value="ELC_EVENT_SCE_TEST_BUSY" />
+            <option display="SCE WRRDY 0" id="module.driver.transfer.event.event_sce_wrrdy_0" value="ELC_EVENT_SCE_WRRDY_0" />
+            <option display="SCE WRRDY 1" id="module.driver.transfer.event.event_sce_wrrdy_1" value="ELC_EVENT_SCE_WRRDY_1" />
+            <option display="SCE WRRDY 4" id="module.driver.transfer.event.event_sce_wrrdy_4" value="ELC_EVENT_SCE_WRRDY_4" />
+            <option display="SCI0 AM" id="module.driver.transfer.event.event_sci0_am" value="ELC_EVENT_SCI0_AM" />
+            <option display="SCI0 ERI" id="module.driver.transfer.event.event_sci0_eri" value="ELC_EVENT_SCI0_ERI" />
+            <option display="SCI0 RXI" id="module.driver.transfer.event.event_sci0_rxi" value="ELC_EVENT_SCI0_RXI" />
+            <option display="SCI0 RXI OR ERI" id="module.driver.transfer.event.event_sci0_rxi_or_eri" value="ELC_EVENT_SCI0_RXI_OR_ERI" />
+            <option display="SCI0 TEI" id="module.driver.transfer.event.event_sci0_tei" value="ELC_EVENT_SCI0_TEI" />
+            <option display="SCI0 TXI" id="module.driver.transfer.event.event_sci0_txi" value="ELC_EVENT_SCI0_TXI" />
+            <option display="SCI1 AM" id="module.driver.transfer.event.event_sci1_am" value="ELC_EVENT_SCI1_AM" />
+            <option display="SCI1 ERI" id="module.driver.transfer.event.event_sci1_eri" value="ELC_EVENT_SCI1_ERI" />
+            <option display="SCI1 RXI" id="module.driver.transfer.event.event_sci1_rxi" value="ELC_EVENT_SCI1_RXI" />
+            <option display="SCI1 TEI" id="module.driver.transfer.event.event_sci1_tei" value="ELC_EVENT_SCI1_TEI" />
+            <option display="SCI1 TXI" id="module.driver.transfer.event.event_sci1_txi" value="ELC_EVENT_SCI1_TXI" />
+            <option display="SCI2 AM" id="module.driver.transfer.event.event_sci2_am" value="ELC_EVENT_SCI2_AM" />
+            <option display="SCI2 ERI" id="module.driver.transfer.event.event_sci2_eri" value="ELC_EVENT_SCI2_ERI" />
+            <option display="SCI2 RXI" id="module.driver.transfer.event.event_sci2_rxi" value="ELC_EVENT_SCI2_RXI" />
+            <option display="SCI2 TEI" id="module.driver.transfer.event.event_sci2_tei" value="ELC_EVENT_SCI2_TEI" />
+            <option display="SCI2 TXI" id="module.driver.transfer.event.event_sci2_txi" value="ELC_EVENT_SCI2_TXI" />
+            <option display="SCI3 AM" id="module.driver.transfer.event.event_sci3_am" value="ELC_EVENT_SCI3_AM" />
+            <option display="SCI3 ERI" id="module.driver.transfer.event.event_sci3_eri" value="ELC_EVENT_SCI3_ERI" />
+            <option display="SCI3 RXI" id="module.driver.transfer.event.event_sci3_rxi" value="ELC_EVENT_SCI3_RXI" />
+            <option display="SCI3 TEI" id="module.driver.transfer.event.event_sci3_tei" value="ELC_EVENT_SCI3_TEI" />
+            <option display="SCI3 TXI" id="module.driver.transfer.event.event_sci3_txi" value="ELC_EVENT_SCI3_TXI" />
+            <option display="SCI4 AM" id="module.driver.transfer.event.event_sci4_am" value="ELC_EVENT_SCI4_AM" />
+            <option display="SCI4 ERI" id="module.driver.transfer.event.event_sci4_eri" value="ELC_EVENT_SCI4_ERI" />
+            <option display="SCI4 RXI" id="module.driver.transfer.event.event_sci4_rxi" value="ELC_EVENT_SCI4_RXI" />
+            <option display="SCI4 TEI" id="module.driver.transfer.event.event_sci4_tei" value="ELC_EVENT_SCI4_TEI" />
+            <option display="SCI4 TXI" id="module.driver.transfer.event.event_sci4_txi" value="ELC_EVENT_SCI4_TXI" />
+            <option display="SCI5 AM" id="module.driver.transfer.event.event_sci5_am" value="ELC_EVENT_SCI5_AM" />
+            <option display="SCI5 ERI" id="module.driver.transfer.event.event_sci5_eri" value="ELC_EVENT_SCI5_ERI" />
+            <option display="SCI5 RXI" id="module.driver.transfer.event.event_sci5_rxi" value="ELC_EVENT_SCI5_RXI" />
+            <option display="SCI5 TEI" id="module.driver.transfer.event.event_sci5_tei" value="ELC_EVENT_SCI5_TEI" />
+            <option display="SCI5 TXI" id="module.driver.transfer.event.event_sci5_txi" value="ELC_EVENT_SCI5_TXI" />
+            <option display="SCI6 AM" id="module.driver.transfer.event.event_sci6_am" value="ELC_EVENT_SCI6_AM" />
+            <option display="SCI6 ERI" id="module.driver.transfer.event.event_sci6_eri" value="ELC_EVENT_SCI6_ERI" />
+            <option display="SCI6 RXI" id="module.driver.transfer.event.event_sci6_rxi" value="ELC_EVENT_SCI6_RXI" />
+            <option display="SCI6 TEI" id="module.driver.transfer.event.event_sci6_tei" value="ELC_EVENT_SCI6_TEI" />
+            <option display="SCI6 TXI" id="module.driver.transfer.event.event_sci6_txi" value="ELC_EVENT_SCI6_TXI" />
+            <option display="SCI7 AM" id="module.driver.transfer.event.event_sci7_am" value="ELC_EVENT_SCI7_AM" />
+            <option display="SCI7 ERI" id="module.driver.transfer.event.event_sci7_eri" value="ELC_EVENT_SCI7_ERI" />
+            <option display="SCI7 RXI" id="module.driver.transfer.event.event_sci7_rxi" value="ELC_EVENT_SCI7_RXI" />
+            <option display="SCI7 TEI" id="module.driver.transfer.event.event_sci7_tei" value="ELC_EVENT_SCI7_TEI" />
+            <option display="SCI7 TXI" id="module.driver.transfer.event.event_sci7_txi" value="ELC_EVENT_SCI7_TXI" />
+            <option display="SCI8 AM" id="module.driver.transfer.event.event_sci8_am" value="ELC_EVENT_SCI8_AM" />
+            <option display="SCI8 ERI" id="module.driver.transfer.event.event_sci8_eri" value="ELC_EVENT_SCI8_ERI" />
+            <option display="SCI8 RXI" id="module.driver.transfer.event.event_sci8_rxi" value="ELC_EVENT_SCI8_RXI" />
+            <option display="SCI8 TEI" id="module.driver.transfer.event.event_sci8_tei" value="ELC_EVENT_SCI8_TEI" />
+            <option display="SCI8 TXI" id="module.driver.transfer.event.event_sci8_txi" value="ELC_EVENT_SCI8_TXI" />
+            <option display="SCI9 AM" id="module.driver.transfer.event.event_sci9_am" value="ELC_EVENT_SCI9_AM" />
+            <option display="SCI9 ERI" id="module.driver.transfer.event.event_sci9_eri" value="ELC_EVENT_SCI9_ERI" />
+            <option display="SCI9 RXI" id="module.driver.transfer.event.event_sci9_rxi" value="ELC_EVENT_SCI9_RXI" />
+            <option display="SCI9 TEI" id="module.driver.transfer.event.event_sci9_tei" value="ELC_EVENT_SCI9_TEI" />
+            <option display="SCI9 TXI" id="module.driver.transfer.event.event_sci9_txi" value="ELC_EVENT_SCI9_TXI" />
+            <option display="SDHIMMC0 ACCS" id="module.driver.transfer.event.event_sdhimmc0_accs" value="ELC_EVENT_SDHIMMC0_ACCS" />
+            <option display="SDHIMMC0 CARD" id="module.driver.transfer.event.event_sdhimmc0_card" value="ELC_EVENT_SDHIMMC0_CARD" />
+            <option display="SDHIMMC0 DMA REQ" id="module.driver.transfer.event.event_sdhimmc0_dma_req" value="ELC_EVENT_SDHIMMC0_DMA_REQ" />
+            <option display="SDHIMMC0 SDIO" id="module.driver.transfer.event.event_sdhimmc0_sdio" value="ELC_EVENT_SDHIMMC0_SDIO" />
+            <option display="SDHIMMC1 ACCS" id="module.driver.transfer.event.event_sdhimmc1_accs" value="ELC_EVENT_SDHIMMC1_ACCS" />
+            <option display="SDHIMMC1 CARD" id="module.driver.transfer.event.event_sdhimmc1_card" value="ELC_EVENT_SDHIMMC1_CARD" />
+            <option display="SDHIMMC1 DMA REQ" id="module.driver.transfer.event.event_sdhimmc1_dma_req" value="ELC_EVENT_SDHIMMC1_DMA_REQ" />
+            <option display="SDHIMMC1 SDIO" id="module.driver.transfer.event.event_sdhimmc1_sdio" value="ELC_EVENT_SDHIMMC1_SDIO" />
+            <option display="SPI0 ERI" id="module.driver.transfer.event.event_spi0_eri" value="ELC_EVENT_SPI0_ERI" />
+            <option display="SPI0 IDLE" id="module.driver.transfer.event.event_spi0_idle" value="ELC_EVENT_SPI0_IDLE" />
+            <option display="SPI0 RXI" id="module.driver.transfer.event.event_spi0_rxi" value="ELC_EVENT_SPI0_RXI" />
+            <option display="SPI0 TEI" id="module.driver.transfer.event.event_spi0_tei" value="ELC_EVENT_SPI0_TEI" />
+            <option display="SPI0 TXI" id="module.driver.transfer.event.event_spi0_txi" value="ELC_EVENT_SPI0_TXI" />
+            <option display="SPI1 ERI" id="module.driver.transfer.event.event_spi1_eri" value="ELC_EVENT_SPI1_ERI" />
+            <option display="SPI1 IDLE" id="module.driver.transfer.event.event_spi1_idle" value="ELC_EVENT_SPI1_IDLE" />
+            <option display="SPI1 RXI" id="module.driver.transfer.event.event_spi1_rxi" value="ELC_EVENT_SPI1_RXI" />
+            <option display="SPI1 TEI" id="module.driver.transfer.event.event_spi1_tei" value="ELC_EVENT_SPI1_TEI" />
+            <option display="SPI1 TXI" id="module.driver.transfer.event.event_spi1_txi" value="ELC_EVENT_SPI1_TXI" />
+            <option display="SRC CONVERSION END" id="module.driver.transfer.event.event_src_conversion_end" value="ELC_EVENT_SRC_CONVERSION_END" />
+            <option display="SRC INPUT FIFO EMPTY" id="module.driver.transfer.event.event_src_input_fifo_empty" value="ELC_EVENT_SRC_INPUT_FIFO_EMPTY" />
+            <option display="SRC OUTPUT FIFO FULL" id="module.driver.transfer.event.event_src_output_fifo_full" value="ELC_EVENT_SRC_OUTPUT_FIFO_FULL" />
+            <option display="SRC OUTPUT FIFO OVERFLOW" id="module.driver.transfer.event.event_src_output_fifo_overflow" value="ELC_EVENT_SRC_OUTPUT_FIFO_OVERFLOW" />
+            <option display="SRC OUTPUT FIFO UNDERFLOW" id="module.driver.transfer.event.event_src_output_fifo_underflow" value="ELC_EVENT_SRC_OUTPUT_FIFO_UNDERFLOW" />
+            <option display="SSI0 INT" id="module.driver.transfer.event.event_ssi0_int" value="ELC_EVENT_SSI0_INT" />
+            <option display="SSI0 RXI" id="module.driver.transfer.event.event_ssi0_rxi" value="ELC_EVENT_SSI0_RXI" />
+            <option display="SSI0 TXI" id="module.driver.transfer.event.event_ssi0_txi" value="ELC_EVENT_SSI0_TXI" />
+            <option display="SSI1 INT" id="module.driver.transfer.event.event_ssi1_int" value="ELC_EVENT_SSI1_INT" />
+            <option display="SSI1 TXI RXI" id="module.driver.transfer.event.event_ssi1_txi_rxi" value="ELC_EVENT_SSI1_TXI_RXI" />
+            <option display="USBFS FIFO 0" id="module.driver.transfer.event.event_usbfs_fifo_0" value="ELC_EVENT_USBFS_FIFO_0" />
+            <option display="USBFS FIFO 1" id="module.driver.transfer.event.event_usbfs_fifo_1" value="ELC_EVENT_USBFS_FIFO_1" />
+            <option display="USBFS INT" id="module.driver.transfer.event.event_usbfs_int" value="ELC_EVENT_USBFS_INT" />
+            <option display="USBFS RESUME" id="module.driver.transfer.event.event_usbfs_resume" value="ELC_EVENT_USBFS_RESUME" />
+            <option display="USBHS FIFO 0" id="module.driver.transfer.event.event_usbhs_fifo_0" value="ELC_EVENT_USBHS_FIFO_0" />
+            <option display="USBHS FIFO 1" id="module.driver.transfer.event.event_usbhs_fifo_1" value="ELC_EVENT_USBHS_FIFO_1" />
+            <option display="USBHS USB INT RESUME" id="module.driver.transfer.event.event_usbhs_usb_int_resume" value="ELC_EVENT_USBHS_USB_INT_RESUME" />
+            <option display="WDT UNDERFLOW" id="module.driver.transfer.event.event_wdt_underflow" value="ELC_EVENT_WDT_UNDERFLOW" />
+        </enum>
+        <enum id="enum.mcu.nvic.priorities.mandatory" default="board.icu.common.irq.priority12">
+          <option display="Priority 0 (highest)" id="board.icu.common.irq.priority0" value="(0)" />
+          <option display="Priority 1" id="board.icu.common.irq.priority1" value="(1)" />
+          <option display="Priority 2" id="board.icu.common.irq.priority2" value="(2)" />
+          <option display="Priority 3" id="board.icu.common.irq.priority3" value="(3)" />
+          <option display="Priority 4" id="board.icu.common.irq.priority4" value="(4)" />
+          <option display="Priority 5" id="board.icu.common.irq.priority5" value="(5)" />
+          <option display="Priority 6" id="board.icu.common.irq.priority6" value="(6)" />
+          <option display="Priority 7" id="board.icu.common.irq.priority7" value="(7)" />
+          <option display="Priority 8" id="board.icu.common.irq.priority8" value="(8)" />
+          <option display="Priority 9" id="board.icu.common.irq.priority9" value="(9)" />
+          <option display="Priority 10" id="board.icu.common.irq.priority10" value="(10)" />
+          <option display="Priority 11" id="board.icu.common.irq.priority11" value="(11)" />
+          <option display="Priority 12" id="board.icu.common.irq.priority12" value="(12)" />
+          <option display="Priority 13" id="board.icu.common.irq.priority13" value="(13)" />
+          <option display="Priority 14" id="board.icu.common.irq.priority14" value="(14)" />
+          <option display="Priority 15 (lowest - not valid if using ThreadX)" id="board.icu.common.irq.priority15" value="(15)" />
+        </enum>
+        <enum id="enum.mcu.nvic.priorities.optional" default="board.icu.common.irq.disabled">
+          <option display="Priority 0 (highest)" id="board.icu.common.irq.priority0" value="(0)" />
+          <option display="Priority 1" id="board.icu.common.irq.priority1" value="(1)" />
+          <option display="Priority 2" id="board.icu.common.irq.priority2" value="(2)" />
+          <option display="Priority 3" id="board.icu.common.irq.priority3" value="(3)" />
+          <option display="Priority 4" id="board.icu.common.irq.priority4" value="(4)" />
+          <option display="Priority 5" id="board.icu.common.irq.priority5" value="(5)" />
+          <option display="Priority 6" id="board.icu.common.irq.priority6" value="(6)" />
+          <option display="Priority 7" id="board.icu.common.irq.priority7" value="(7)" />
+          <option display="Priority 8" id="board.icu.common.irq.priority8" value="(8)" />
+          <option display="Priority 9" id="board.icu.common.irq.priority9" value="(9)" />
+          <option display="Priority 10" id="board.icu.common.irq.priority10" value="(10)" />
+          <option display="Priority 11" id="board.icu.common.irq.priority11" value="(11)" />
+          <option display="Priority 12" id="board.icu.common.irq.priority12" value="(12)" />
+          <option display="Priority 13" id="board.icu.common.irq.priority13" value="(13)" />
+          <option display="Priority 14" id="board.icu.common.irq.priority14" value="(14)" />
+          <option display="Priority 15 (lowest - not valid if using ThreadX)" id="board.icu.common.irq.priority15" value="(15)" />
+          <option display="Disabled" id="board.icu.common.irq.disabled" value="(BSP_IRQ_DISABLED)" />
+        </enum>
+        <enum id="enum.mcu.tx_src.hw_stack_monitoring" default="config.el.tx_src.hw_stack_monitoring.enabled">
+            <option id="config.el.tx_src.hw_stack_monitoring.enabled" display="Enabled (default)" value="1" />
+            <option id="config.el.tx_src.hw_stack_monitoring.disabled" display="Disabled" value="0" />                
+        </enum>
+        <enum id="enum.mcu.lvd.monitor" default="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_1_LEVEL_13">
+          <option display="2.99V (Vdet1_11)" id="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_1_LEVEL_11" value="LVD_THRESHOLD_MONITOR_1_LEVEL_11"/>
+          <option display="2.92V (Vdet1_12)" id="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_1_LEVEL_12" value="LVD_THRESHOLD_MONITOR_1_LEVEL_12"/>
+          <option display="2.85V (Vdet1_13)" id="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_1_LEVEL_13" value="LVD_THRESHOLD_MONITOR_1_LEVEL_13"/>
+          <option display="2.99V (Vdet2_5)" id="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_2_LEVEL_5" value="LVD_THRESHOLD_MONITOR_2_LEVEL_5"/>
+          <option display="2.92V (Vdet2_6)" id="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_2_LEVEL_6" value="LVD_THRESHOLD_MONITOR_2_LEVEL_6"/>
+          <option display="2.85V (Vdet2_7)" id="module.driver.lvd.voltage_threshold.LVD_THRESHOLD_MONITOR_2_LEVEL_7" value="LVD_THRESHOLD_MONITOR_2_LEVEL_7"/>
+        </enum>
+        <enum id="enum.mcu.sdhi.bus_width" default="module.driver.sdmmc.bus_width.bus_width_4_bits">
+            <option display="1 Bit" id="module.driver.sdmmc.bus_width.bus_width_1_bit" value="SDMMC_BUS_WIDTH_1_BIT"/>
+            <option display="4 Bits" id="module.driver.sdmmc.bus_width.bus_width_4_bits" value="SDMMC_BUS_WIDTH_4_BITS"/>
+            <option display="8 Bits" id="module.driver.sdmmc.bus_width.bus_width_8_bits" value="SDMMC_BUS_WIDTH_8_BITS"/>
+        </enum>
+        <enum id="enum.mcu.dac.output_amplifier" default="module.driver.dac.output_amplifier_enabled.false">
+          <option display="Enable" id="module.driver.dac.output_amplifier_enabled.true" value="true"/>
+          <option display="Disable" id="module.driver.dac.output_amplifier_enabled.false" value="false"/>
+        </enum>
+		<enum id="enum.mcu.dac.charge_pump" default="module.driver.dac.charge_pump_enabled.false">
+          <option display="Disable" id="module.driver.dac.charge_pump_enabled.false" value="false"/>
+        </enum>
+        <enum id="enum.mcu.adc.resolution" default="module.driver.adc.resolution.resolution_12_bit">
+            <option display="12-Bit" id="module.driver.adc.resolution.resolution_12_bit" value="ADC_RESOLUTION_12_BIT" />
+            <option display="10-Bit" id="module.driver.adc.resolution.resolution_10_bit" value="ADC_RESOLUTION_10_BIT" />
+            <option display="8-Bit" id="module.driver.adc.resolution.resolution_8_bit" value="ADC_RESOLUTION_8_BIT" />
+        </enum>
+        <enum id="enum.mcu.adc.pga" default="module.driver.adc.pga.disabled">
+            <option display="Disabled" id="module.driver.adc.pga.disabled" value="PGA_DISABLE" />
+            <option display="Single Input_x2" id="module.driver.adc.pga.s1" value="SINGLE_INPUT_GAIN_1" />  
+            <option display="Single Input_x2.5" id="module.driver.adc.pga.s2" value="SINGLE_INPUT_GAIN_2" />  
+            <option display="Single Input_x_2.66" id="module.driver.adc.pga.s3" value="SINGLE_INPUT_GAIN_3" />  
+            <option display="Single Input_x_2.85" id="module.driver.adc.pga.s4" value="SINGLE_INPUT_GAIN_4" />  
+            <option display="Single Input_x_3.07" id="module.driver.adc.pga.s5" value="SINGLE_INPUT_GAIN_5" />  
+            <option display="Single Input_x_3.33" id="module.driver.adc.pga.s6" value="SINGLE_INPUT_GAIN_6" />  
+            <option display="Single Input_x_3.63" id="module.driver.adc.pga.s7" value="SINGLE_INPUT_GAIN_7" />  
+            <option display="Single Input_x_4.00" id="module.driver.adc.pga.s8" value="SINGLE_INPUT_GAIN_8" />  
+            <option display="Single Input_x_4.44" id="module.driver.adc.pga.s9" value="SINGLE_INPUT_GAIN_9" />  
+            <option display="Single Input_x_5.00" id="module.driver.adc.pga.s10" value="SINGLE_INPUT_GAIN_10" />  
+            <option display="Single Input_x_5.71" id="module.driver.adc.pga.s11" value="SINGLE_INPUT_GAIN_11" />  
+            <option display="Single Input_x_6.66" id="module.driver.adc.pga.s12" value="SINGLE_INPUT_GAIN_12" />  
+            <option display="Single Input_x_8.00" id="module.driver.adc.pga.s13" value="SINGLE_INPUT_GAIN_13" />  
+            <option display="Single Input_x_10.0" id="module.driver.adc.pga.s14" value="SINGLE_INPUT_GAIN_14" />  
+            <option display="Single Input_x_13.33" id="module.driver.adc.pga.s15" value="SINGLE_INPUT_GAIN_15" />  
+            <option display="Diff Input_x_1.5" id="module.driver.adc.pga.d1" value="DIFFERENTIAL_INPUT_GAIN_1" />  
+            <option display="Diff Input_x_2.3" id="module.driver.adc.pga.d2" value="DIFFERENTIAL_INPUT_GAIN_2" />  
+            <option display="Diff Input_x_4.0" id="module.driver.adc.pga.d3" value="DIFFERENTIAL_INPUT_GAIN_3" />  
+            <option display="Diff Input_x_5.66" id="module.driver.adc.pga.d4" value="DIFFERENTIAL_INPUT_GAIN_4" />  
+        </enum>
+        <enum id="enum.mcu.can.clock_source" default="module.driver.can.clock_source.canmclk">
+            <option display="PCLKB" id="module.driver.can.clock_source.pclkb" value="CAN_CLOCK_SOURCE_PCLKB"/>
+            <option display="CAN MCLK" id="module.driver.can.clock_source.canmclk" value="CAN_CLOCK_SOURCE_CANMCLK"/>
+        </enum>
+        <enum id="enum.driver.cgc.main_osc_wait" default="config.driver.cgc.main_osc_wait.wait_547">
+            <option display="134 us (35 cycles)" id="config.driver.cgc.main_osc_wait.wait_35" value="(1)"/>
+            <option display="256 us (67 cycles)" id="config.driver.cgc.main_osc_wait.wait_67" value="(2)"/>
+            <option display="500 us (131 cycles)" id="config.driver.cgc.main_osc_wait.wait_131" value="(3)"/>
+            <option display="988 us (259 cycles)" id="config.driver.cgc.main_osc_wait.wait_259" value="(4)"/>
+            <option display="2087 us (547 cycles)" id="config.driver.cgc.main_osc_wait.wait_547" value="(5)"/>
+            <option display="4040 us (1059 cycles)" id="config.driver.cgc.main_osc_wait.wait_1059" value="(6)"/>
+            <option display="8190 us (2147 cycles)" id="config.driver.cgc.main_osc_wait.wait_2147" value="(7)"/>
+            <option display="16369 us (4291 cycles)" id="config.driver.cgc.main_osc_wait.wait_4291" value="(8)"/>
+            <option display="31139 us (8163 cycles)" id="config.driver.cgc.main_osc_wait.wait_8163" value="(9)"/>
+        </enum>
+        <enum id="enum.driver.cgc.pll_state" default="module.driver.cgc_cfg.subosc_state.pll_state_clock_change_none">
+            <option display="None" id="module.driver.cgc_cfg.pll_state.pll_state_clock_change_none" value="CGC_CLOCK_CHANGE_NONE"/>
+            <option display="Stop" id="module.driver.cgc_cfg.pll_state.pll_state_clock_change_stop" value="CGC_CLOCK_CHANGE_STOP"/>
+            <option display="Start" id="module.driver.cgc_cfg.pll_state.pll_state_clock_change_start" value="CGC_CLOCK_CHANGE_START"/>
+        </enum>
+        <enum id="enum.driver.cgc.pll_clock_source" default="module.driver.cgc_cfg.source_clock.source_clock_main_osc">
+            <option display="HOCO" id="module.driver.cgc_cfg.source_clock.source_clock_hoco" value="CGC_CLOCK_HOCO"/>
+            <option display="Main Oscillator" id="module.driver.cgc_cfg.source_clock.source_clock_main_osc" value="CGC_CLOCK_MAIN_OSC"/>
+        </enum>
+        <enum id="enum.driver.cgc.pll_divisor" default="module.driver.cgc_cfg.divider.divider_div_2">
+            <option display="1" id="module.driver.cgc_cfg.divider.divider_div_1" value="CGC_PLL_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.divider.divider_div_2" value="CGC_PLL_DIV_2"/>
+            <option display="3" id="module.driver.cgc_cfg.divider.divider_div_3" value="CGC_PLL_DIV_3"/>
+        </enum>
+        <enum id="enum.driver.cgc.pll_multiplier" default="module.driver.cgc_cfg.multiplier.multiplier_mul_20.0">
+            <option display="10.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_10.0" value="10.0"/>
+            <option display="10.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_10.5" value="10.5"/>
+            <option display="11.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_11.0" value="11.0"/>
+            <option display="11.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_11.5" value="11.5"/>
+            <option display="12.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_12.0" value="12.0"/>
+            <option display="12.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_12.5" value="12.5"/>
+            <option display="13.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_13.0" value="13.0"/>
+            <option display="13.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_13.5" value="13.5"/>
+            <option display="14.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_14.0" value="14.0"/>
+            <option display="14.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_14.5" value="14.5"/>
+            <option display="15.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_15.0" value="15.0"/>
+            <option display="15.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_15.5" value="15.5"/>
+            <option display="16.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_16.0" value="16.0"/>
+            <option display="16.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_16.5" value="16.5"/>
+            <option display="17.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_17.0" value="17.0"/>
+            <option display="17.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_17.5" value="17.5"/>
+            <option display="18.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_18.0" value="18.0"/>
+            <option display="18.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_18.5" value="18.5"/>
+            <option display="19.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_19.0" value="19.0"/>
+            <option display="19.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_19.5" value="19.5"/>
+            <option display="20.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_20.0" value="20.0"/>
+            <option display="20.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_20.5" value="20.5"/>
+            <option display="21.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_21.0" value="21.0"/>
+            <option display="21.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_21.5" value="21.5"/>
+            <option display="22.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_22.0" value="22.0"/>
+            <option display="22.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_22.5" value="22.5"/>
+            <option display="23.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_23.0" value="23.0"/>
+            <option display="23.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_23.5" value="23.5"/>
+            <option display="24.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_24.0" value="24.0"/>
+            <option display="24.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_24.5" value="24.5"/>
+            <option display="25.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_25.0" value="25.0"/>
+            <option display="25.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_25.5" value="25.5"/>
+            <option display="26.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_26.0" value="26.0"/>
+            <option display="26.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_26.5" value="26.5"/>
+            <option display="27.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_27.0" value="27.0"/>
+            <option display="27.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_27.5" value="27.5"/>
+            <option display="28.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_28.0" value="28.0"/>
+            <option display="28.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_28.5" value="28.5"/>
+            <option display="29.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_29.0" value="29.0"/>
+            <option display="29.5" id="module.driver.cgc_cfg.multiplier.multiplier_mul_29.5" value="29.5"/>
+            <option display="30.0" id="module.driver.cgc_cfg.multiplier.multiplier_mul_30.0" value="30.0"/>
+        </enum>
+        <enum id="enum.driver.cgc.pclka_div" default="module.driver.cgc_cfg.pclka_div.pclka_div_div_2">
+            <option display="1" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_1" value="CGC_SYS_CLOCK_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_2" value="CGC_SYS_CLOCK_DIV_2"/>
+            <option display="4" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_4" value="CGC_SYS_CLOCK_DIV_4"/>
+            <option display="8" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_8" value="CGC_SYS_CLOCK_DIV_8"/>
+            <option display="16" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_16" value="CGC_SYS_CLOCK_DIV_16"/>
+            <option display="32" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_32" value="CGC_SYS_CLOCK_DIV_32"/>
+            <option display="64" id="module.driver.cgc_cfg.pclka_div.pclka_div_div_64" value="CGC_SYS_CLOCK_DIV_64"/>
+        </enum>
+        <enum id="enum.driver.cgc.pclkb_div" default="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_4">
+            <option display="1" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_1" value="CGC_SYS_CLOCK_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_2" value="CGC_SYS_CLOCK_DIV_2"/>
+            <option display="4" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_4" value="CGC_SYS_CLOCK_DIV_4"/>
+            <option display="8" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_8" value="CGC_SYS_CLOCK_DIV_8"/>
+            <option display="16" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_16" value="CGC_SYS_CLOCK_DIV_16"/>
+            <option display="32" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_32" value="CGC_SYS_CLOCK_DIV_32"/>
+            <option display="64" id="module.driver.cgc_cfg.pclkb_div.pclkb_div_div_64" value="CGC_SYS_CLOCK_DIV_64"/>
+        </enum>
+        <enum id="enum.driver.cgc.pclkc_div" default="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_4">
+            <option display="1" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_1" value="CGC_SYS_CLOCK_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_2" value="CGC_SYS_CLOCK_DIV_2"/>
+            <option display="4" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_4" value="CGC_SYS_CLOCK_DIV_4"/>
+            <option display="8" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_8" value="CGC_SYS_CLOCK_DIV_8"/>
+            <option display="16" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_16" value="CGC_SYS_CLOCK_DIV_16"/>
+            <option display="32" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_32" value="CGC_SYS_CLOCK_DIV_32"/>
+            <option display="64" id="module.driver.cgc_cfg.pclkc_div.pclkc_div_div_64" value="CGC_SYS_CLOCK_DIV_64"/>
+        </enum>
+        <enum id="enum.driver.cgc.pclkd_div" default="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_2">
+            <option display="1" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_1" value="CGC_SYS_CLOCK_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_2" value="CGC_SYS_CLOCK_DIV_2"/>
+            <option display="4" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_4" value="CGC_SYS_CLOCK_DIV_4"/>
+            <option display="8" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_8" value="CGC_SYS_CLOCK_DIV_8"/>
+            <option display="16" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_16" value="CGC_SYS_CLOCK_DIV_16"/>
+            <option display="32" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_32" value="CGC_SYS_CLOCK_DIV_32"/>
+            <option display="64" id="module.driver.cgc_cfg.pclkd_div.pclkd_div_div_64" value="CGC_SYS_CLOCK_DIV_64"/>
+        </enum>
+        <enum id="enum.driver.cgc.bclk_div" default="module.driver.cgc_cfg.bclk_div.bclk_div_div_2">
+            <option display="1" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_1" value="CGC_SYS_CLOCK_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_2" value="CGC_SYS_CLOCK_DIV_2"/>
+            <option display="4" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_4" value="CGC_SYS_CLOCK_DIV_4"/>
+            <option display="8" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_8" value="CGC_SYS_CLOCK_DIV_8"/>
+            <option display="16" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_16" value="CGC_SYS_CLOCK_DIV_16"/>
+            <option display="32" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_32" value="CGC_SYS_CLOCK_DIV_32"/>
+            <option display="64" id="module.driver.cgc_cfg.bclk_div.bclk_div_div_64" value="CGC_SYS_CLOCK_DIV_64"/>
+        </enum>
+        <enum id="enum.driver.cgc.fclk_div" default="module.driver.cgc_cfg.fclk_div.fclk_div_div_4">
+            <option display="1" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_1" value="CGC_SYS_CLOCK_DIV_1"/>
+            <option display="2" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_2" value="CGC_SYS_CLOCK_DIV_2"/>
+            <option display="4" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_4" value="CGC_SYS_CLOCK_DIV_4"/>
+            <option display="8" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_8" value="CGC_SYS_CLOCK_DIV_8"/>
+            <option display="16" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_16" value="CGC_SYS_CLOCK_DIV_16"/>
+            <option display="32" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_32" value="CGC_SYS_CLOCK_DIV_32"/>
+            <option display="64" id="module.driver.cgc_cfg.fclk_div.fclk_div_div_64" value="CGC_SYS_CLOCK_DIV_64"/>
+        </enum>
+        <enum id="enum.driver.cgc.system_clock_source" default="module.driver.cgc_cfg.system_clock.system_clock_hoco"> 
+            <option display="HOCO" id="module.driver.cgc_cfg.system_clock.system_clock_hoco" value="CGC_CLOCK_HOCO"/>
+            <option display="MOCO" id="module.driver.cgc_cfg.system_clock.system_clock_moco" value="CGC_CLOCK_MOCO"/>
+            <option display="LOCO" id="module.driver.cgc_cfg.system_clock.system_clock_loco" value="CGC_CLOCK_LOCO"/>
+            <option display="Main Oscillator" id="module.driver.cgc_cfg.system_clock.system_clock_main_osc" value="CGC_CLOCK_MAIN_OSC"/>
+            <option display="Sub-Clock" id="module.driver.cgc_cfg.system_clock.system_clock_sub_clk" value="CGC_CLOCK_SUBCLOCK"/>
+            <option display="PLL" id="module.driver.cgc_cfg.system_clock.system_clock_pll" value="CGC_CLOCK_PLL"/>
+        </enum>
+        <enum id="enum.driver.cgc.subclock_drive" default="config.driver.cgc.subclock_drive.standard">
+            <option display="Middle (4.4pf)" id="config.driver.cgc.subclock_drive.middle" value="(1)"/>
+            <option display="Standard (12.5pf)" id="config.driver.cgc.subclock_drive.standard" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_128_ecb.enable" id="enum.driver.sce.crypto_aes_plain_text_128_ecb">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_128_ecb.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_128_ecb.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_128_cbc.enable" id="enum.driver.sce.crypto_aes_plain_text_128_cbc">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_128_cbc.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_128_cbc.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_128_ctr.enable" id="enum.driver.sce.crypto_aes_plain_text_128_ctr">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_128_ctr.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_128_ctr.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_128_gcm.enable" id="enum.driver.sce.crypto_aes_plain_text_128_gcm">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_128_gcm.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_128_gcm.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_128_xts.enable" id="enum.driver.sce.crypto_aes_plain_text_128_xts">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_128_xts.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_128_xts.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_192_ecb.enable" id="enum.driver.sce.crypto_aes_plain_text_192_ecb">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_192_ecb.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_192_ecb.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_192_cbc.enable" id="enum.driver.sce.crypto_aes_plain_text_192_cbc">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_192_cbc.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_192_cbc.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_192_ctr.enable" id="enum.driver.sce.crypto_aes_plain_text_192_ctr">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_192_ctr.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_192_ctr.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_192_gcm.enable" id="enum.driver.sce.crypto_aes_plain_text_192_gcm">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_192_gcm.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_192_gcm.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_256_ecb.enable" id="enum.driver.sce.crypto_aes_plain_text_256_ecb">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_256_ecb.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_256_ecb.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_256_cbc.enable" id="enum.driver.sce.crypto_aes_plain_text_256_cbc">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_256_cbc.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_256_cbc.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_256_ctr.enable" id="enum.driver.sce.crypto_aes_plain_text_256_ctr">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_256_ctr.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_256_ctr.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_256_gcm.enable" id="enum.driver.sce.crypto_aes_plain_text_256_gcm">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_256_gcm.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_256_gcm.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_plain_text_256_xts.enable" id="enum.driver.sce.crypto_aes_plain_text_256_xts">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_plain_text_256_xts.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_plain_text_256_xts.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_128_ecb.enable" id="enum.driver.sce.crypto_aes_wrapped_128_ecb">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_128_ecb.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_128_ecb.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_128_cbc.enable" id="enum.driver.sce.crypto_aes_wrapped_128_cbc">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_128_cbc.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_128_cbc.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_128_ctr.enable" id="enum.driver.sce.crypto_aes_wrapped_128_ctr">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_128_ctr.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_128_ctr.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_128_gcm.enable" id="enum.driver.sce.crypto_aes_wrapped_128_gcm">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_128_gcm.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_128_gcm.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_128_xts.enable" id="enum.driver.sce.crypto_aes_wrapped_128_xts">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_128_xts.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_128_xts.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_192_ecb.enable" id="enum.driver.sce.crypto_aes_wrapped_192_ecb">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_192_ecb.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_192_ecb.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_192_cbc.enable" id="enum.driver.sce.crypto_aes_wrapped_192_cbc">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_192_cbc.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_192_cbc.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_192_ctr.enable" id="enum.driver.sce.crypto_aes_wrapped_192_ctr">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_192_ctr.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_192_ctr.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_192_gcm.enable" id="enum.driver.sce.crypto_aes_wrapped_192_gcm">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_192_gcm.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_192_gcm.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_256_ecb.enable" id="enum.driver.sce.crypto_aes_wrapped_256_ecb">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_256_ecb.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_256_ecb.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_256_cbc.enable" id="enum.driver.sce.crypto_aes_wrapped_256_cbc">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_256_cbc.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_256_cbc.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_256_ctr.enable" id="enum.driver.sce.crypto_aes_wrapped_256_ctr">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_256_ctr.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_256_ctr.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_256_gcm.enable" id="enum.driver.sce.crypto_aes_wrapped_256_gcm">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_256_gcm.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_256_gcm.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_aes_wrapped_256_xts.enable" id="enum.driver.sce.crypto_aes_wrapped_256_xts">
+            <option display="Enable"     id="module.driver.sce.crypto_aes_wrapped_256_xts.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_aes_wrapped_256_xts.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_rsa_plain_text_1024.enable" id="enum.driver.sce.crypto_rsa_plain_text_1024">
+            <option display="Enable"     id="module.driver.sce.crypto_rsa_plain_text_1024.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_rsa_plain_text_1024.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_rsa_plain_text_2048.enable" id="enum.driver.sce.crypto_rsa_plain_text_2048">
+            <option display="Enable"     id="module.driver.sce.crypto_rsa_plain_text_2048.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_rsa_plain_text_2048.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_rsa_wrapped_1024.enable" id="enum.driver.sce.crypto_rsa_wrapped_1024">
+            <option display="Enable"     id="module.driver.sce.crypto_rsa_wrapped_1024.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_rsa_wrapped_1024.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_rsa_wrapped_2048.enable" id="enum.driver.sce.crypto_rsa_wrapped_2048">
+            <option display="Enable"     id="module.driver.sce.crypto_rsa_wrapped_2048.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_rsa_wrapped_2048.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_plain_text_192.enable" id="enum.driver.sce.crypto_ecc_plain_text_192">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_plain_text_192.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_plain_text_192.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_plain_text_224.enable" id="enum.driver.sce.crypto_ecc_plain_text_224">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_plain_text_224.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_plain_text_224.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_plain_text_256.enable" id="enum.driver.sce.crypto_ecc_plain_text_256">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_plain_text_256.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_plain_text_256.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_plain_text_384.enable" id="enum.driver.sce.crypto_ecc_plain_text_384">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_plain_text_384.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_plain_text_384.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_wrapped_192.enable" id="enum.driver.sce.crypto_ecc_wrapped_192">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_wrapped_192.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_wrapped_192.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_wrapped_224.enable" id="enum.driver.sce.crypto_ecc_wrapped_224">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_wrapped_224.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_wrapped_224.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_wrapped_256.enable" id="enum.driver.sce.crypto_ecc_wrapped_256">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_wrapped_256.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_wrapped_256.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_ecc_wrapped_384.enable" id="enum.driver.sce.crypto_ecc_wrapped_384">
+            <option display="Enable"     id="module.driver.sce.crypto_ecc_wrapped_384.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_ecc_wrapped_384.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_hash_sha1.enable" id="enum.driver.sce.crypto_hash_sha1">
+            <option display="Enable"     id="module.driver.sce.crypto_hash_sha1.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_hash_sha1.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_hash_sha224.enable" id="enum.driver.sce.crypto_hash_sha224">
+            <option display="Enable"     id="module.driver.sce.crypto_hash_sha224.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_hash_sha224.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_hash_sha256.enable" id="enum.driver.sce.crypto_hash_sha256">
+            <option display="Enable"     id="module.driver.sce.crypto_hash_sha256.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_hash_sha256.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_hash_md5.enable" id="enum.driver.sce.crypto_hash_md5">
+            <option display="Enable"     id="module.driver.sce.crypto_hash_md5.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_hash_md5.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.sce.crypto_trng.enable" id="enum.driver.sce.crypto_trng">
+            <option display="Enable"     id="module.driver.sce.crypto_trng.enable" value="(1)"/>
+            <option display="Disable"      id="module.driver.sce.crypto_trng.disable" value="(0)"/>
+        </enum>
+        <enum default="module.driver.ptp.clock_mode.ordinary_clock" id="enum.mcu.ptp.clock_mode">
+            <option display="Ordinary clock 0" id="module.driver.ptp.clock_mode.ordinary_clock0" value="PTP_DEVICE_ORDINARY_CLOCK0"/>
+            <option display="Ordinary clock 1" id="module.driver.ptp.clock_mode.ordinary_clock1" value="PTP_DEVICE_ORDINARY_CLOCK1"/>
+            <option display="Boundary clock" id="module.driver.ptp.clock_mode.boundary_clock" value="PTP_DEVICE_BOUNDARY_CLOCK"/>
+            <option display="Transparent clock" id="module.driver.ptp.clock_mode.transparent_clock" value="PTP_DEVICE_TRANSPARENT_CLOCK"/>
+        </enum>
+        <enum default="module.driver.ptp.delay_mechanism.e2e" id="enum.mcu.ptp.delay_mechanism">
+            <option display="E2E" id="module.driver.ptp.delay_mechanism.e2e" value="PTP_DELAY_MECHANISM_E2E"/>
+            <option display="P2P" id="module.driver.ptp.delay_mechanism.p2p" value="PTP_DELAY_MECHANISM_P2P"/>
+        </enum>
+        <enum default="module.driver.ptp.clock_state.slave" id="enum.mcu.ptp.clock_state">
+            <option display="Master" id="module.driver.ptp.clock_state.master" value="PTP_STATE_MASTER"/>
+            <option display="Slave" id="module.driver.ptp.clock_state.slave" value="PTP_STATE_SLAVE"/>
+        </enum>
+        <enum default="module.driver.ptp.frame_format.eth" id="enum.mcu.ptp.frame_format">
+            <option display="Ethernet II frame format" id="module.driver.ptp.frame_format.eth" value="PTP_FRAME_FORMAT_ETH"/>
+            <option display="IEEE802.3 frame format" id="module.driver.ptp.frame_format.eth_8023" value="PTP_FRAME_FORMAT_ETH_8023"/>
+            <option display="Ethernet II over UDP4" id="module.driver.ptp.frame_format.udp4" value="PTP_FRAME_FORMAT_UDP4"/>
+            <option display="IEEE802.3 over UDP4" id="module.driver.ptp.frame_format.udp4_8023" value="PTP_FRAME_FORMAT_UDP4_8023"/>
+        </enum>
+        <clock>
+            <constraint display="ICLK must not be less than PCLKA or PCLKB">
+                (${value:board.clock.iclk.display} &gt;= ${value:board.clock.pclka.display}) &amp;&amp;
+                (${value:board.clock.iclk.display} &gt;= ${value:board.clock.pclkb.display})
+            </constraint>
+            <constraint display="ICLK must not be less than FCLK">
+                (${value:board.clock.iclk.display} &gt;= ${value:board.clock.fclk.display})
+            </constraint>
+            <constraint display="ICLK must not be less than BCLK">
+                (${value:board.clock.iclk.display} &gt;= ${value:board.clock.bclk.display})
+            </constraint>
+            <constraint display="PCKLA must not be less than PCLKB">
+                (${value:board.clock.pclka.display} &gt;= ${value:board.clock.pclkb.display})
+            </constraint>
+            <constraint display="PCLKD must not be less than PCLKA or PCLKB">
+                (${value:board.clock.pclkd.display} &gt;= ${value:board.clock.pclka.display}) &amp;&amp;
+                (${value:board.clock.pclkd.display} &gt;= ${value:board.clock.pclkb.display})
+            </constraint>
+            <constraint display="PCLKB:PCLKC ratio must equal 1:1, 1:2, 1:4, 2:1, 4:1, or 8:1">
+                ((${value:board.clock.pclkc.display} / ${value:board.clock.pclkb.display}) &lt;= 4)
+                &amp;&amp;
+                ((${value:board.clock.pclkb.display} / ${value:board.clock.pclkc.display}) &lt;= 8)
+            </constraint>
+            <node id="board.clock.xtal.freq" xhint="0" yhint="0" default="24000000" tooltip="Click to edit the XTAL frequency.">
+                <option id="_edit" display="XTAL ${value}Hz" macroName="BSP_CFG_XTAL_HZ" macroValue="(${value})" />
+            </node>
+            <node id="board.clock.usbmclk.freq" xhint="0" yhint="4" default="board.clock.usbmclk.freq" tooltip="USB-PHY clock supports only 20 or 24 MHz.">
+                <option id="board.clock.usbmclk.freq" display="USBMCLK ${value}Hz" input="board.clock.xtal.freq"  /> 
+            </node>
+            <node id="board.clock.pll.source" xhint="1" yhint="1" default="board.clock.pll.source.xtal">
+                <option id="board.clock.pll.source.xtal" display="PLL Src: XTAL" input="board.clock.xtal.freq" macroName="BSP_CFG_PLL_SOURCE" macroValue="(CGC_CLOCK_MAIN_OSC)" />
+                <option id="board.clock.pll.source.hoco" display="PLL Src: HOCO" input="board.clock.hoco.freq" macroName="BSP_CFG_PLL_SOURCE" macroValue="(CGC_CLOCK_HOCO)" />
+            </node>
+            <node id="board.clock.hoco.freq" xhint="0" yhint="5" default="board.clock.hoco.freq.20m">
+                <option id="board.clock.hoco.freq.16m" display="HOCO 16MHz" mul="16000000" macroName="BSP_CFG_HOCO_FREQUENCY" macroValue="(0)" />
+                <option id="board.clock.hoco.freq.18m" display="HOCO 18MHz" mul="18000000" macroName="BSP_CFG_HOCO_FREQUENCY" macroValue="(1)" />
+                <option id="board.clock.hoco.freq.20m" display="HOCO 20MHz" mul="20000000" macroName="BSP_CFG_HOCO_FREQUENCY" macroValue="(2)" />
+            </node>
+            <node id="board.clock.loco.freq" xhint="0" yhint="6" default="board.clock.loco.freq.32768">
+                <option id="board.clock.loco.freq.32768" display="LOCO 32768Hz" mul="32768" />
+            </node>
+            <node id="board.clock.moco.freq" xhint="0" yhint="7" default="board.clock.moco.freq.8m">
+                <option id="board.clock.moco.freq.8m" display="MOCO 8MHz" mul="8000000" />
+            </node>
+            <node id="board.clock.subclk.freq" xhint="0" yhint="8" default="board.clock.subclk.freq.32768">
+                <option id="board.clock.subclk.freq.32768" display="SUBCLK 32768Hz" mul="32768" />
+            </node>
+            <node id="board.clock.pll.div" xhint="1" yhint="2" default="board.clock.pll.div.2">
+                <option id="board.clock.pll.div.1" display="PLL Div /1" div="1" input="board.clock.pll.source" macroName="BSP_CFG_PLL_DIV" macroValue="(CGC_PLL_DIV_1)" />
+                <option id="board.clock.pll.div.2" display="PLL Div /2" div="2" input="board.clock.pll.source" macroName="BSP_CFG_PLL_DIV" macroValue="(CGC_PLL_DIV_2)" />
+                <option id="board.clock.pll.div.3" display="PLL Div /3" div="3" input="board.clock.pll.source" macroName="BSP_CFG_PLL_DIV" macroValue="(CGC_PLL_DIV_3)" />
+            </node>
+            <node id="board.clock.pll.mul" xhint="1" yhint="3" default="board.clock.pll.mul.200">
+                <option id="board.clock.pll.mul.100" display="PLL Mul x10.0" mul="100" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(10.0)" />
+                <option id="board.clock.pll.mul.105" display="PLL Mul x10.5" mul="105" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(10.5)" />
+                <option id="board.clock.pll.mul.110" display="PLL Mul x11.0" mul="110" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(11.0)" />
+                <option id="board.clock.pll.mul.115" display="PLL Mul x11.5" mul="115" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(11.5)" />
+                <option id="board.clock.pll.mul.120" display="PLL Mul x12.0" mul="120" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(12.0)" />
+                <option id="board.clock.pll.mul.125" display="PLL Mul x12.5" mul="125" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(12.5)" />
+                <option id="board.clock.pll.mul.130" display="PLL Mul x13.0" mul="130" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(13.0)" />
+                <option id="board.clock.pll.mul.135" display="PLL Mul x13.5" mul="135" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(13.5)" />
+                <option id="board.clock.pll.mul.140" display="PLL Mul x14.0" mul="140" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(14.0)" />
+                <option id="board.clock.pll.mul.145" display="PLL Mul x14.5" mul="145" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(14.5)" />
+                <option id="board.clock.pll.mul.150" display="PLL Mul x15.0" mul="150" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(15.0)" />
+                <option id="board.clock.pll.mul.155" display="PLL Mul x15.5" mul="155" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(15.5)" />
+                <option id="board.clock.pll.mul.160" display="PLL Mul x16.0" mul="160" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(16.0)" />
+                <option id="board.clock.pll.mul.165" display="PLL Mul x16.5" mul="165" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(16.5)" />
+                <option id="board.clock.pll.mul.170" display="PLL Mul x17.0" mul="170" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(17.0)" />
+                <option id="board.clock.pll.mul.175" display="PLL Mul x17.5" mul="175" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(17.5)" />
+                <option id="board.clock.pll.mul.180" display="PLL Mul x18.0" mul="180" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(18.0)" />
+                <option id="board.clock.pll.mul.185" display="PLL Mul x18.5" mul="185" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(18.5)" />
+                <option id="board.clock.pll.mul.190" display="PLL Mul x19.0" mul="190" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(19.0)" />
+                <option id="board.clock.pll.mul.195" display="PLL Mul x19.5" mul="195" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(19.5)" />
+                <option id="board.clock.pll.mul.200" display="PLL Mul x20.0" mul="200" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(20.0)" />
+                <option id="board.clock.pll.mul.205" display="PLL Mul x20.5" mul="205" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(20.5)" />
+                <option id="board.clock.pll.mul.210" display="PLL Mul x21.0" mul="210" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(21.0)" />
+                <option id="board.clock.pll.mul.215" display="PLL Mul x21.5" mul="215" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(21.5)" />
+                <option id="board.clock.pll.mul.220" display="PLL Mul x22.0" mul="220" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(22.0)" />
+                <option id="board.clock.pll.mul.225" display="PLL Mul x22.5" mul="225" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(22.5)" />
+                <option id="board.clock.pll.mul.230" display="PLL Mul x23.0" mul="230" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(23.0)" />
+                <option id="board.clock.pll.mul.235" display="PLL Mul x23.5" mul="235" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(23.5)" />
+                <option id="board.clock.pll.mul.240" display="PLL Mul x24.0" mul="240" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(24.0)" />
+                <option id="board.clock.pll.mul.245" display="PLL Mul x24.5" mul="245" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(24.5)" />
+                <option id="board.clock.pll.mul.250" display="PLL Mul x25.0" mul="250" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(25.0)" />
+                <option id="board.clock.pll.mul.255" display="PLL Mul x25.5" mul="255" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(25.5)" />
+                <option id="board.clock.pll.mul.260" display="PLL Mul x26.0" mul="260" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(26.0)" />
+                <option id="board.clock.pll.mul.265" display="PLL Mul x26.5" mul="265" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(26.5)" />
+                <option id="board.clock.pll.mul.270" display="PLL Mul x27.0" mul="270" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(27.0)" />
+                <option id="board.clock.pll.mul.275" display="PLL Mul x27.5" mul="275" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(27.5)" />
+                <option id="board.clock.pll.mul.280" display="PLL Mul x28.0" mul="280" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(28.0)" />
+                <option id="board.clock.pll.mul.285" display="PLL Mul x28.5" mul="285" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(28.5)" />
+                <option id="board.clock.pll.mul.290" display="PLL Mul x29.0" mul="290" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(29.0)" />
+                <option id="board.clock.pll.mul.295" display="PLL Mul x29.5" mul="295" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(29.5)" />
+                <option id="board.clock.pll.mul.300" display="PLL Mul x30.0" mul="300" div="10" input="board.clock.pll.div" macroName="BSP_CFG_PLL_MUL" macroValue="(30.0)" />
+            </node>
+            <node id="board.clock.pll.display" xhint="1" yhint="4">
+                <option id="board.clock.pll.display.value" input="board.clock.pll.mul" display="PLL ${value}Hz" minValue="120000000" maxValue="240000000" />
+            </node>
+            <node id="board.clock.clock.source" xhint="2" yhint="4" default="board.clock.clock.source.pll">
+                <option id="board.clock.clock.source.hoco" display="Clock Src: HOCO" input="board.clock.hoco.freq" macroName="BSP_CFG_CLOCK_SOURCE" macroValue="(CGC_CLOCK_HOCO)" />
+                <option id="board.clock.clock.source.moco" display="Clock Src: MOCO" input="board.clock.moco.freq" macroName="BSP_CFG_CLOCK_SOURCE" macroValue="(CGC_CLOCK_MOCO)" />
+                <option id="board.clock.clock.source.loco" display="Clock Src: LOCO" input="board.clock.loco.freq" macroName="BSP_CFG_CLOCK_SOURCE" macroValue="(CGC_CLOCK_LOCO)" />
+                <option id="board.clock.clock.source.xtal" display="Clock Src: XTAL" input="board.clock.xtal.freq" macroName="BSP_CFG_CLOCK_SOURCE" macroValue="(CGC_CLOCK_MAIN_OSC)" />
+                <option id="board.clock.clock.source.subclk" display="Clock Src: SUBCLK" input="board.clock.subclk.freq" macroName="BSP_CFG_CLOCK_SOURCE" macroValue="(CGC_CLOCK_SUBCLOCK)" />
+                <option id="board.clock.clock.source.pll" display="Clock Src: PLL" input="board.clock.pll.display" macroName="BSP_CFG_CLOCK_SOURCE" macroValue="(CGC_CLOCK_PLL)" />
+            </node>
+            <node id="board.clock.iclk.div" xhint="3" yhint="0" default="board.clock.iclk.div.1">
+                <option id="board.clock.iclk.div.1" display="ICLK Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.iclk.div.2" display="ICLK Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.iclk.div.4" display="ICLK Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.iclk.div.8" display="ICLK Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.iclk.div.16" display="ICLK Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.iclk.div.32" display="ICLK Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.iclk.div.64" display="ICLK Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_ICK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.iclk.display" xhint="4" yhint="0" tooltip="The system clock (ICLK) is used as the operating clock of the CPU, DMAC, DTC, ROM and RAM.">
+                <peripheral id="board.clock.peripheral.can.iclk" />
+                <option id="board.clock.iclk.display.value" input="board.clock.iclk.div" display="ICLK ${value}Hz" maxValue="240000000" />
+            </node>
+            <node id="board.clock.pclka.div" xhint="3" yhint="1" default="board.clock.pclka.div.2">
+                <option id="board.clock.pclka.div.1" display="PCLKA Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.pclka.div.2" display="PCLKA Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.pclka.div.4" display="PCLKA Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.pclka.div.8" display="PCLKA Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.pclka.div.16" display="PCLKA Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.pclka.div.32" display="PCLKA Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.pclka.div.64" display="PCLKA Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_PCKA_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.pclka.display" xhint="4" yhint="1" tooltip="The Peripheral clock A (PCLKA) is used as the operating clock for the ETHER, USBHS, QSPI, RSPI, SCI, TSIP, GLCD, SDHI, CRC, JPEG, G2D, GPT and Standby-RAM modules.">
+                <peripheral id="board.clock.peripheral.spi" />
+                <peripheral id="board.clock.peripheral.ether" />
+                <peripheral id="board.clock.peripheral.can.pclka" />
+                <option id="board.clock.pclka.display.value" input="board.clock.pclka.div" display="PCLKA ${value}Hz" maxValue="120000000" />
+            </node>
+            <node id="board.clock.pclkb.div" xhint="3" yhint="2" default="board.clock.pclkb.div.4">
+                <option id="board.clock.pclkb.div.1" display="PCLKB Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.pclkb.div.2" display="PCLKB Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.pclkb.div.4" display="PCLKB Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.pclkb.div.8" display="PCLKB Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.pclkb.div.16" display="PCLKB Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.pclkb.div.32" display="PCLKB Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.pclkb.div.64" display="PCLKB Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_PCKB_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.pclkb.display" xhint="4" yhint="2" tooltip="The Peripheral clock B (PCLKB) is used as the operating clock for all other modules not supported by PCLKA, PCLKC and PCLKD.">
+                <peripheral id="board.clock.peripheral.can" />
+                <peripheral id="board.clock.peripheral.can.pclkb" />
+                <option id="board.clock.pclkb.display.value" input="board.clock.pclkb.div" display="PCLKB ${value}Hz" maxValue="60000000" />
+            </node>
+            <node id="board.clock.pclkc.div" xhint="3" yhint="3" default="board.clock.pclkc.div.4">
+                <option id="board.clock.pclkc.div.1" display="PCLKC Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.pclkc.div.2" display="PCLKC Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.pclkc.div.4" display="PCLKC Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.pclkc.div.8" display="PCLKC Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.pclkc.div.16" display="PCLKC Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.pclkc.div.32" display="PCLKC Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.pclkc.div.64" display="PCLKC Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_PCKC_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.pclkc.display" xhint="4" yhint="3" tooltip="The Peripheral clock C (PCLKC) is used as the operating clock for the ADC modules.">
+                <peripheral id="board.clock.peripheral.adc" />
+                <option id="board.clock.pclkc.display.value" input="board.clock.pclkc.div" display="PCLKC ${value}Hz" maxValue="60000000" />
+            </node>
+            <node id="board.clock.pclkd.div" xhint="3" yhint="4" default="board.clock.pclkd.div.2">
+                <option id="board.clock.pclkd.div.1" display="PCLKD Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.pclkd.div.2" display="PCLKD Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.pclkd.div.4" display="PCLKD Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.pclkd.div.8" display="PCLKD Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.pclkd.div.16" display="PCLKD Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.pclkd.div.32" display="PCLKD Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.pclkd.div.64" display="PCLKD Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_PCKD_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.pclkd.display" xhint="4" yhint="4" tooltip="The Peripheral clock D (PCLKD) is used as the operating clock for the GPT module.">
+                <option id="board.clock.pclkd.display.value" input="board.clock.pclkd.div" display="PCLKD ${value}Hz" maxValue="120000000" />
+            </node>
+            <node id="board.clock.sdclkout.div" xhint="3" yhint="5" default="board.clock.sdclkout.div.1">
+                <option id="board.clock.sdclkout.div.0" display="SDCLKout Off" mul="0" input="board.clock.bclk.div" macroName="BSP_CFG_SDCLK_OUTPUT" macroValue="(0)" />
+                <option id="board.clock.sdclkout.div.1" display="SDCLKout On" div="1" input="board.clock.bclk.div" macroName="BSP_CFG_SDCLK_OUTPUT" macroValue="(1)" />
+            </node>
+            <node id="board.clock.sdclkout.display" xhint="4" yhint="5" tooltip="The SDRAM clock (SDCLK) is an operating clock for the external bus controller.\nIt is output externally from the SDCLK pin for the SDRAM that is connected to the external bus.">
+                <option id="board.clock.sdclkout.display.value" input="board.clock.sdclkout.div" display="SDCLKout ${value}Hz" maxValue="120000000" />
+            </node>
+            <node id="board.clock.bclk.div" xhint="3" yhint="6" default="board.clock.bclk.div.2">
+                <option id="board.clock.bclk.div.1" display="BCLK Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.bclk.div.2" display="BCLK Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.bclk.div.4" display="BCLK Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.bclk.div.8" display="BCLK Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.bclk.div.16" display="BCLK Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.bclk.div.32" display="BCLK Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.bclk.div.64" display="BCLK Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_BCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.bclk.display" xhint="4" yhint="6" tooltip="The external bus clock (BCLK) is an operating clock for the external bus controller.\nIt is also output externally from the BCLK pin for the external connection bus.">
+                <option id="board.clock.bclk.display.value" input="board.clock.bclk.div" display="BCLK ${value}Hz" maxValue="120000000" />
+            </node>
+            <node id="board.clock.bclkout.div" xhint="3" yhint="7" default="board.clock.bclkout.div.2">
+                <option id="board.clock.bclkout.div.0" display="No output" mul="0" input="board.clock.bclk.div" macroName="BSP_CFG_BCLK_OUTPUT" macroValue="(0)" />
+                <option id="board.clock.bclkout.div.1" display="BCK" div="1" input="board.clock.bclk.div" macroName="BSP_CFG_BCLK_OUTPUT" macroValue="(1)" />
+                <option id="board.clock.bclkout.div.2" display="BCK/2" div="2" input="board.clock.bclk.div" macroName="BSP_CFG_BCLK_OUTPUT" macroValue="(2)" />
+            </node>
+            <node id="board.clock.bclkout.display" xhint="4" yhint="7" tooltip="Whether to output the BCLK frequency on the BCLKOUT pin.">
+                <option id="board.clock.bclkout.display.value" input="board.clock.bclkout.div" display="BCLKout ${value}Hz" maxValue="60000000" />
+            </node>
+            <node id="board.clock.uclk.div" xhint="3" yhint="8" default="board.clock.uclk.div.5">
+                <option id="board.clock.uclk.div.3" display="UCLK Div /3" div="3" input="board.clock.clock.source" macroName="BSP_CFG_UCK_DIV" macroValue="(CGC_USB_CLOCK_DIV_3)" />
+                <option id="board.clock.uclk.div.4" display="UCLK Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_UCK_DIV" macroValue="(CGC_USB_CLOCK_DIV_4)" />
+                <option id="board.clock.uclk.div.5" display="UCLK Div /5" div="5" input="board.clock.clock.source" macroName="BSP_CFG_UCK_DIV" macroValue="(CGC_USB_CLOCK_DIV_5)" />
+             </node>
+            <node id="board.clock.uclk.display" xhint="4" yhint="8" tooltip="The USB clock (UCLK) is an operating clock for the USBFS module.\nA 48-MHz clock must be supplied to the USB module.\nWhen the USB module is used, setting must be made so that UCLK is 48 MHz.">
+                <peripheral id="board.clock.peripheral.usb" />
+                <option id="board.clock.uclk.display.value" input="board.clock.uclk.div" display="UCLK ${value}Hz" minValue="48000000" maxValue="48000000" />
+            </node>
+            <node id="board.clock.fclk.div" xhint="3" yhint="9" default="board.clock.fclk.div.4">
+                <option id="board.clock.fclk.div.1" display="FCLK Div /1" div="1" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_1)" />
+                <option id="board.clock.fclk.div.2" display="FCLK Div /2" div="2" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_2)" />
+                <option id="board.clock.fclk.div.4" display="FCLK Div /4" div="4" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_4)" />
+                <option id="board.clock.fclk.div.8" display="FCLK Div /8" div="8" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_8)" />
+                <option id="board.clock.fclk.div.16" display="FCLK Div /16" div="16" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_16)" />
+                <option id="board.clock.fclk.div.32" display="FCLK Div /32" div="32" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_32)" />
+                <option id="board.clock.fclk.div.64" display="FCLK Div /64" div="64" input="board.clock.clock.source" macroName="BSP_CFG_FCK_DIV" macroValue="(CGC_SYS_CLOCK_DIV_64)" />
+            </node>
+            <node id="board.clock.fclk.display" xhint="4" yhint="9" tooltip="The flash-interface clock (FCLK) is used as the operating clock for the flash-memory interfaces.\nThat is, FCLK is used for programming and erasure of the ROM and E2 DataFlash, and reading from the E2 DataFlash.">
+                <option id="board.clock.fclk.display.value" input="board.clock.fclk.div" display="FCLK ${value}Hz" minValue="4000000" maxValue="60000000" />
+            </node>
+        </clock>
+    </bsp>
+</synergyModuleDescription>

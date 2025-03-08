@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<deviceconfig>
+  <device>
+    <name>R7FS7G27G</name>
+    <series>Synergy</series>
+    <family>S7</family>
+    <server>
+      <params>
+        <param>-t R7FS7G27G</param>
+      </params>
+    </server>
+    <initcmd />
+    <runcmd />
+  </device>
+  <device>
+    <name>R7FS7G27H</name>
+    <series>Synergy</series>
+    <family>S7</family>
+    <server>
+      <params>
+        <param>-t R7FS7G27H</param>
+      </params>
+    </server>
+    <initcmd />
+    <runcmd />
+  </device>
+</deviceconfig>

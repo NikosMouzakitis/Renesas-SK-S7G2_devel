@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>Renesas</vendor>
+  <name>Synergy</name>
+  <description>CMSIS Pack for Renesas Synergy Software Package (SSP)</description>
+  <url>www.renesas.com</url>
+  <supportContact />
+  <releases>
+    <release version="2.6.1">2.6.1</release>
+  </releases>
+  <keywords>
+    <keyword>Renesas</keyword>
+    <keyword>Synergy</keyword>
+    <keyword>S7G2</keyword>
+  </keywords>
+  <conditions>
+    <condition id="Only_CM4_and_GCC">
+      <description>Only for use with CM4 and GCC</description>
+      <require Dcore="Cortex-M4" />
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="Only_CM4_and_IAR">
+      <description>Only for use with CM4 and IAR</description>
+      <require Dcore="Cortex-M4" />
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="Only_CM0_and_GCC">
+      <description>Only for use with CM0 and GCC</description>
+      <require Dcore="Cortex-M0+" />
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="Only_CM0_and_IAR">
+      <description>Only for use with CM0 and IAR</description>
+      <require Dcore="Cortex-M0+" />
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="S3A7_and_IAR_LOWLEVEL">
+      <description>Tempororary identifier for Selecting S3 tx_initialize_low_level.s </description>
+      <require Dname="R7FS3A7*" />
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="S124_and_IAR_LOWLEVEL">
+      <description>Tempororary identifier for Selecting S124 tx_initialize_low_level.s </description>
+      <require Dname="R7FS124*" />
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="S128_and_IAR_LOWLEVEL">
+      <description>Tempororary identifier for Selecting S128 tx_initialize_low_level.s </description>
+      <require Dname="R7FS128*" />
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="S7G2_and_IAR_LOWLEVEL">
+      <description>Temporary identifier for Selecting S7 tx_initialize_low_level.s </description>
+      <require Dname="R7FS7G2*" />
+      <require Tcompiler="IAR" />
+    </condition>
+    <condition id="S3A7_and_GCC_LOWLEVEL">
+      <description>Tempororary identifier for Selecting S3 tx_initialize_low_level.s </description>
+      <require Dname="R7FS3A7*" />
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="S124_and_GCC_LOWLEVEL">
+      <description>Tempororary identifier for Selecting S124 tx_initialize_low_level.s </description>
+      <require Dname="R7FS124*" />
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="S128_and_GCC_LOWLEVEL">
+      <description>Tempororary identifier for Selecting S128 tx_initialize_low_level.s </description>
+      <require Dname="R7FS128*" />
+      <require Tcompiler="GCC" />
+    </condition>
+    <condition id="S7G2_and_GCC_LOWLEVEL">
+      <description>Temporary identifier for Selecting S7 tx_initialize_low_level.s </description>
+      <require Dname="R7FS7G2*" />
+      <require Tcompiler="GCC" />
+    </condition>
+  </conditions>
+  <components>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27G2A01CBD" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27G2A01CBD</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G2A01CBD_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G2A01CBD_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27G2A01CBG" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27G2A01CBG</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G2A01CBG_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G2A01CBG_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27G2A01CLK" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27G2A01CLK</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G2A01CLK_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G2A01CLK_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27G3A01CFB" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27G3A01CFB</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G3A01CFB_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G3A01CFB_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27G3A01CFC" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27G3A01CFC</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G3A01CFC_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G3A01CFC_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27G3A01CFP" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27G3A01CFP</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G3A01CFP_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27G3A01CFP_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27H2A01CBD" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27H2A01CBD</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H2A01CBD_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H2A01CBD_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27H2A01CBG" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27H2A01CBG</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H2A01CBG_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H2A01CBG_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27H2A01CLK" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27H2A01CLK</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H2A01CLK_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H2A01CLK_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27H3A01CFB" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27H3A01CFB</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H3A01CFB_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H3A01CFB_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvariant="R7FS7G27H3A01CFC" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for R7FS7G27H3A01CFC</description>
+      <files>
+        <file category="library" condition="S7G2_and_GCC_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H3A01CFC_gcc.a" select="" version="2.6.1" />
+        <file category="library" condition="S7G2_and_IAR_LOWLEVEL" name="synergy/ssp/src/bsp/mcu/s7g2/libfmi_R7FS7G27H3A01CFC_iar.a" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="device" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for S7G2</description>
+      <files>
+        <file category="header" condition="" name="synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Include/system_S7G2.h" select="" version="2.6.1" />
+      </files>
+    </component>
+    <component Cclass="BSP" Cgroup="s7g2" Csub="ssp" Cvendor="Renesas" Cversion="2.6.1" condition="">
+      <description>Board support package for S7G2</description>
+      <files>
+        <file category="header" condition="" name="synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Include/S7G2.h" select="" version="2.6.1" />
+        <file category="header" condition="" name="synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Include/system_S7G2.h" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/startup_S7G2.c" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/cmsis/Device/RENESAS/S7G2/Source/system_S7G2.c" select="" version="2.6.1" />
+        <file category="header" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_analog.h" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.c" select="" version="2.6.1" />
+        <file category="header" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_cache.h" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_clocks.c" select="" version="2.6.1" />
+        <file category="header" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_elc.h" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_feature.c" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_group_irq.c" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_hw_locks.c" select="" version="2.6.1" />
+        <file category="header" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_mcu_info.h" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_module_stop.c" select="" version="2.6.1" />
+        <file category="source" condition="" name="synergy/ssp/src/bsp/mcu/s7g2/bsp_rom_registers.c" select="" version="2.6.1" />
+      </files>
+    </component>
+  </components>
+</package>

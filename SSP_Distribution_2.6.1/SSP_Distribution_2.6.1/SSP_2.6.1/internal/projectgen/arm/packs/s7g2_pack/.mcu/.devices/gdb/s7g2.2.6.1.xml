@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ARMDeviceList>
+  <Header>
+    <Generated>2017-12-06T22:39:15.7671148Z</Generated>
+    <FileToolVersion>2.7.5235.17264</FileToolVersion>
+    <Support>ARM</Support>
+  </Header>
+  <E1Information>
+    <Path>ARM\E1</Path>
+    <FileName></FileName>
+  </E1Information>
+  <SeggerInformation>
+    <Path>ARM\Segger</Path>
+    <FileName>JLinkARM.dll</FileName>
+  </SeggerInformation>
+  <Devices>
+    <Device cpuName="R7FS7G27G" armFamily="CM4" regset=".\ARM\CM4regset">
+      <MemMonitor address="0x400" size="8" name="Option Function Select" write="true" />
+      <MemMonitor address="0x408" size="52" name="SECMPUxxx" write="true" />
+    </Device>
+    <Device cpuName="R7FS7G27H" armFamily="CM4" regset=".\ARM\CM4regset">
+      <MemMonitor address="0x400" size="8" name="Option Function Select" write="true" />
+      <MemMonitor address="0x408" size="52" name="SECMPUxxx" write="true" />
+    </Device>
+  </Devices>
+</ARMDeviceList>
